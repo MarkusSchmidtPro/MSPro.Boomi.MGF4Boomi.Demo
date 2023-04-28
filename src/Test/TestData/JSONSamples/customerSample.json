@@ -1,0 +1,52 @@
+[
+  {
+    "Header": {
+      "Contact URN": "C00001",
+      "Valldata URN": "V2023041101",
+      "SegmentCode": "C36591",
+      "Date Received": "09/04/2023"
+    },
+    "Title": "Mr",
+    "Forename": "Markus",
+    "Lastname": "Schmidt",
+    "Phone Number 1": "+49 611 544746",
+    "Mobile Number": "+49 172 2420376",
+    "EmailAddress": "Markus.Schmidt@Boomi.com",
+    "PostalAddress": {
+      "AddressType": "HOME",
+      "Address Line 1": "Bürgermeister-Prenn-Str. 6",
+      "Address Line 2": "Wherever",
+      "Address Line 3": "I lay my hat,",
+      "Address Line 5": "that's my home.",
+      "Postcode": "82008",
+      "Town": "Unterhaching",
+      "County": "Bavaria",
+      "Country": "Germany"
+    }
+  },
+  {
+    "Header": {
+      "Contact URN": "C00002",
+      "Valldata URN": "V2023041201",
+      "SegmentCode": "C36591",
+      "Date Received": "12/04/2023"
+    },
+    "Title": "Mr",
+    "Forename": "Markus",
+    "Surname": "Schmidt2",
+    "Phone Number 1": "+49 611 544746",
+    "Mobile Number": "+49 172 2420376",
+    "EmailAddress": "Markus.Schmidt@Boomi.com",
+    "PostalAddress": {
+      "AddressType": "HOME",
+      "Address Line 1": "Bürgermeister-Prenn-Str. 6",
+      "Address Line 2": "Wherever",
+      "Address Line 3": "I lay my hat,",
+      "Address Line 5": "that's my home.",
+      "Postcode": "82008",
+      "Town": "Unterhaching",
+      "County": "Bavaria",
+      "Country": "Germany"
+    }
+  }
+]

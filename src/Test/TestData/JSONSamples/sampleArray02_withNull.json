@@ -1,0 +1,144 @@
+{
+  "CAT2": {
+    "GenericValues": {
+      "CertificateNumber": "8754",
+      "OtherIndividualsCovered": "Yes",
+      "IndividualsCovered": [
+        {
+          "First Name": "Jane",
+          "Surname": "Bloggs",
+          "Date of Birth": "11-11-1983",
+          "Relationship": "Spouse"
+        },
+        {
+          "First Name": "Junior",
+          "Surname": "Bloggs",
+          "Date of Birth": "05-08-2020",
+          "Relationship": "Child"
+        }
+      ]
+    },
+    "Cert": {
+      "ListEmployment": [
+        {
+          "Employer Name": "Employer One",
+          "Total Gross Income Earned": "18080.99",
+          "Received Director Fees": "No"
+        },
+        {
+          "Employer Name": "Employer Two",
+          "Total Gross Income Earned": "8151.15",
+          "Received Director Fees": "Yes",
+          "Total Director Fees": "5000.00"
+        }
+      ],
+      "ListPension": [
+        {
+          "Name": "Pension One",
+          "Gross Amount Recieved": "180810"
+        },
+        {
+          "Name": "Pension Two",
+          "Gross Amount Recieved": "18014.05"
+        }
+      ],
+      "ListTrade": [
+        {
+          "Trade Name": "Plumbing",
+          "Total Gross Income": "18191"
+        }
+      ],
+      "ListOther": [
+        {
+          "Source of Income": "Cookies",
+          "Gross Amount Received": "1847.19"
+        },
+        {
+          "Source of Income": "Other",
+          "Gross Amount Received": "1894.15"
+        }
+      ]
+    },
+    "NonCert": {
+      "ListEmployment": [
+        {
+          "Employer Name": "All Time Investment Limited",
+          "Total Gross Income Earned": "19000",
+          "Received Director Fees": "No"
+        },
+        {
+          "Employer Name": "Ultimo Employer Limited",
+          "Total Gross Income Earned": "18784",
+          "Received Director Fees": "Yes",
+          "Total Director Fees": "5000.01"
+        }
+      ],
+      "ListTrade": [
+        {
+          "Trade Name": "Plumbing Plus",
+          "Total Gross Income": "18000"
+        }
+      ],
+      "ListOther": [
+        {
+          "Source of Income": "Other Minus",
+          "Gross Amount Received": "1975.15"
+        }
+      ]
+    },
+    "NonGib": {
+      "ListEmployment": [
+        {
+          "Employer Name": "Uk Company Limited",
+          "Total Gross Income Earned": "19051.15",
+          "Received Director Fees": "Yes",
+          "Total Director Fees": "9500.56"
+        },
+        {
+          "Employer Name": "Greek Limited",
+          "Total Gross Income Earned": "900.00",
+          "Received Director Fees": "No"
+        }
+      ],
+      "ListPension": [
+        {
+          "Name": "Outside Pension",
+          "Gross Amount Recieved": "89484"
+        }
+      ],
+      "ListTrade": [
+        {
+          "Trade Name": "Trade Plus Minus",
+          "Total Gross Income": "18489.48"
+        }
+      ],
+      "ListOther": [
+        {
+          "Source of Income": "Testing Plus",
+          "Gross Amount Received": "45.10"
+        }
+      ]
+    },
+    "ListPropertyLetting": [
+      {
+        "Address Line 1": "Rental Property Minus",
+        "Address Line 2": "Property 1",
+        "Country": "GIB",
+        "Postcode": "GX11 1AA",
+        "Is Percentage Share 100": "100",
+        "Net Rents received": "-1891.15"
+      },
+      {
+        "Address Line 1": "29 Rental Flat",
+        "Address Line 2": "Rental Estate",
+        "Country": "GIB",
+        "Postcode": "GX11 1AA",
+        "Is Percentage Share 100": "Other",
+        "Total number of owners": "2",
+        "Percentage owned": "76",
+        "Net Rents received": "189.01"
+      }
+    ]
+  },
+  "ServiceRequestID": "ee9bd7c4-f1e2-47cf-a0ac-3b7cf6e9ade8"
+}
