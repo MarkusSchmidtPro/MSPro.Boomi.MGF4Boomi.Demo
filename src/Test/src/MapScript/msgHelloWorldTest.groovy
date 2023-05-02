@@ -12,10 +12,9 @@ import org.junit.Test
 class HelloWorldTest {
 
     //
-    // Specify Test Script and Testdata directories.
+    // Specify Test Script.
     //
-    //final String TESTDATA_DIR = 'TestData/MSGJsonToHtml'
-    final MapScript _script = new MapScript('helloWorld.groovy')
+    final MapScript _script = new MapScript('msgHelloWorld.groovy')
     
     
     @Test
