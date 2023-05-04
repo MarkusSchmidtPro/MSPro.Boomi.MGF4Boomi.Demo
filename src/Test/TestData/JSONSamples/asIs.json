@@ -1,0 +1,103 @@
+{
+  "externalReferenceId" : "001-TSO-S10000100484",
+  "preliminaryShipments" : [
+    {
+      "externalReferenceId" : "008-DT-230403014704|001-TSO-S10000100484",
+      "units" : [
+        {
+          "weight" : {
+            "value" : 18459,
+            "unit" : "kg"
+          }
+        }
+      ]
+    },
+    {
+      "externalReferenceId" : "008-DT-230403589702|001-TSO-S10000100484",
+      "units" : [
+        {
+          "weight" : {
+            "value" : 7557,
+            "unit" : "kg"
+          }
+        }
+      ]
+    }
+  ],
+  "stops" : [
+    {
+      "address" : {
+        "recipient" : "IKEA DC TORSVIK JOENKOEPING",
+        "line1" : "MOEBELVAEGEN 14",
+        "postalCode" : "556 52",
+        "city" : "JOENKOEPING",
+        "regionCode" : "SE"
+      },
+      "stopType" : "loading",
+      "requestedStartTime" : "2023-04-04 11:00:00",
+      "requestedEndTime" : "2023-04-04 11:00:00",
+      "shipmentExternalReferenceIds" : [
+        "008-DT-230403014704|001-TSO-S10000100484"
+      ]
+    },{
+      "address" : {
+        "recipient" : "IKEA DC TORSVIK JOENKOEPING",
+        "line1" : "MOEBELVAEGEN 14",
+        "postalCode" : "556 52",
+        "city" : "JOENKOEPING",
+        "regionCode" : "SE"
+      },
+      "stopType" : "loading",
+      "requestedStartTime" : "2023-04-04 11:11:11",
+      "requestedEndTime" : "2023-04-04 11:00:00",
+      "shipmentExternalReferenceIds" : [
+        "008-DT-230403014704|001-TSO-S10000100484"
+      ]
+    },
+    {
+      "address" : {
+        "recipient" : "IKEA GOETEBORG - KALLERED KALLERED",
+        "line1" : "EKENLEDEN 2",
+        "postalCode" : "42836",
+        "city" : "KALLERED",
+        "regionCode" : "SE"
+      },
+      "stopType" : "unloading",
+      "requestedStartTime" : "2023-04-05 07:15:00",
+      "requestedEndTime" : "2023-04-05 07:15:00",
+      "shipmentExternalReferenceIds" : [
+        "008-DT-230403014704|001-TSO-S10000100484"
+      ]
+    },
+    {
+      "address" : {
+        "recipient" : "IKEA DC TORSVIK JOENKOEPING",
+        "line1" : "MOEBELVAEGEN 14",
+        "postalCode" : "556 52",
+        "city" : "JOENKOEPING",
+        "regionCode" : "SE"
+      },
+      "stopType" : "loading",
+      "requestedStartTime" : "2023-04-04 11:00:00",
+      "requestedEndTime" : "2023-04-04 11:00:00",
+      "shipmentExternalReferenceIds" : [
+        "008-DT-230403589702|001-TSO-S10000100485"
+      ]
+    },
+    {
+      "address" : {
+        "recipient" : "IKEA KALLERED KALLERED",
+        "line1" : "EKENLEDEN 4-6",
+        "postalCode" : "42836",
+        "city" : "KALLERED",
+        "regionCode" : "SE"
+      },
+      "stopType" : "unloading",
+      "requestedStartTime" : "2023-04-05 07:00:00",
+      "requestedEndTime" : "2023-04-05 07:00:00",
+      "shipmentExternalReferenceIds" : [
+        "008-DT-230403589702|001-TSO-S10000100484"
+      ]
+    }
+  ]
+}
