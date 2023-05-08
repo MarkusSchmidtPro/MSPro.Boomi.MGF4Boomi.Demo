@@ -44,7 +44,7 @@ class psgUC2_Test {
         for (int docNo = 0; docNo < dch.outDocumentCount; docNo++) {
             //Properties docProperties = dataContext.getProperties(docNo);
             String docText = dch.getOutDocumentText(docNo)
-            println('Doc[' + docNo + ']:' + JsonOutput.prettyPrint(docText))
+            println('Doc[' + docNo + ']:' + docText)
         }
     }
 }
