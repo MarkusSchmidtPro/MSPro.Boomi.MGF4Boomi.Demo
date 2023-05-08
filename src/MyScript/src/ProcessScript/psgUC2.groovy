@@ -32,11 +32,11 @@ final String SCRIPT_NAME = "psgUC2"
  "stops" : [
  {
      "address" : {
-     "recipient" : "RDC NÜRNBERG HAFEN",
-     "line1" : "Preßburger Straße 4",
-     "postalCode" : "90451",
-     "city" : "NÜRNBERG HAFEN",
-     "regionCode" : "DEU"
+         "recipient" : "RDC NÜRNBERG HAFEN",
+         "line1" : "Preßburger Straße 4",
+         "postalCode" : "90451",
+         "city" : "NÜRNBERG HAFEN",
+         "regionCode" : "DEU"
      },
      "stopType" : "PICKUP",
      "requestedStartTime" : "20230417120000",
@@ -100,11 +100,11 @@ try {
         def eShipmentXid = eShipment.getChild("ShipmentHeader", ns).getChild("ShipmentGid", ns).getChild("Gid", ns).getChild("Xid", ns) as Element
         String shipmentXid = eShipmentXid.value
 
+        
         Map<String, Element> locations = [:]    // Map with unique locations
         for (def location in eShipment.getChildren("Location", ns)) {
 
             def locationXid = location.getChild("LocationGid", ns).getChild("Gid", ns).getChild("Xid", ns) as Element
-            location.parent = null
             locations[locationXid.value as String] = location as Element
         }
         
@@ -112,7 +112,7 @@ try {
         // Iterate through all ShipmentStop (over all Units in current Shipment!)
         // build a unique list (by LocationGid.Xid)
         //
-        List eShipmentStops= eShipment.getChildren("ShipmentStop", ns)
+        List eShipmentStops = eShipment.getChildren("ShipmentStop", ns)
         eShipmentStops.unique { eShipmentStop1, eShipmentStop2 ->
             String v1 = eShipmentStop1.getChild("LocationGid", ns).getChild("Gid", ns).getChild("Xid", ns).value
             String v2 = eShipmentStop2.getChild("LocationGid", ns).getChild("Gid", ns).getChild("Xid", ns).value
