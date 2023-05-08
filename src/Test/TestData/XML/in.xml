@@ -1,0 +1,16 @@
+<shirts>
+	<shirt colorCode="c4">oxford button-down</shirt>
+	<shirt colorCode="c1">poly blend, straight collar</shirt>
+	<shirt colorCode="c6">monogrammed, tab collar</shirt>
+
+	<colors>
+		<color cid="c1">yellow</color>
+		<color cid="c2">black</color>
+		<color cid="c3">red</color>
+		<color cid="c4">blue</color>
+		<color cid="c5">purple</color>
+		<color cid="c6">white</color>
+		<color cid="c7">orange</color>
+		<color cid="c7">green</color>
+	</colors>
+</shirts>
