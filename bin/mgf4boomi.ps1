@@ -59,7 +59,8 @@ function Update-Framework {
     Set-Location -Path .\lib
     Write-Host "Downloading MGF4Boomi from $url"
     Invoke-WebRequest $url -OutFile .\$projectName.zip
-    Expand-Archive .\$projectName.zip .\
+    Remove-Item .\$projectName              # Create because it is s sub-project of Reference project
+    Expand-Archive .\$projectName.zip .\    # to MGF4Boomi-main
     Rename-Item .\$GitHubProject-$Branch .\$projectName
     Remove-Item .\$projectName.zip
     Pop-Location
@@ -97,11 +98,12 @@ switch( $args[0])
         Get-SampleProject $args[1]
 
         Update-Framework
+        # Framework is now sub-project of Reference project 
         if( !(Test-Path .\lib\groovy-2.4.13 )) { Get-Groovy }
     }
 
     default { 
-        throw "Unknown parameter: $args[0]"
+        throw "Unknown parameter: $args[0]. Allowed: create"
     }
 }
 
