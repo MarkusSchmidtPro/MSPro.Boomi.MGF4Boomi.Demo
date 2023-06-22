@@ -1,3 +1,13 @@
+# ====================================================================================================
+# Usage: .\mgf4boomi.ps1 create <ProjectName>
+#
+# This script does these things
+#   0. Create .\Scripts folder
+#   1. Download and unzip a Reference Project (project template) from GitHub.
+#   2. Update the local MGF4Boomi sources with the latest source from GitHub
+#   3. Download and store the groovy-2.4.13 libraries from the internet.
+#   4. Create a <ProjectName>.code.workspace, in case you want to use Git with VS-Code
+# ====================================================================================================
 
 function Get-SampleProject {
 
@@ -79,11 +89,11 @@ function Get-Groovy {
 
 # ******** MAIN ******************
 
-if ( $args.Count -ne 2 ) { throw "Projectname is missing!" }
+if ( $args.Count -ne 2 ) { throw "Usage: .\mgf4boomi.ps1 create projectname" }
 
 switch( $args[0])
 {
-    "init" { 
+    "create" { 
         Get-SampleProject $args[1]
 
         Update-Framework

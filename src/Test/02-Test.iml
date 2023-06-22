@@ -10,8 +10,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="01-MyScript" />
     <orderEntry type="module" module-name="90-MGF4Boomi" />
     <orderEntry type="library" name="Groovy 2.4.13" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="ATOMSphere" level="project" />
   </component>
 </module>
