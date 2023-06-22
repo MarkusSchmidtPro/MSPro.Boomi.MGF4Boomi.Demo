@@ -38,7 +38,15 @@ try {
         _logger.info('Doc[' + docNo + ']:"' + docText + '"')
 
         _setTextDocument(dataContext, docText, props)
+
+        jsonDocument = JsonOutput.toJson(outJson)
+        _setTextDocument(
+            dataContext, jsonDocument, 
+            dataContext.getProperties(docNo) as Properties)
+        _logger.info('<<< End Script')
     }
+    
+    
     _logger.info('<<< End Script')
 }
 catch (Exception e) {
