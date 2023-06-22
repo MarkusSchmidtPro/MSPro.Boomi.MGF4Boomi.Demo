@@ -1,8 +1,0 @@
-[submodule "MGF4Boomi"]
-<<<<<<< HEAD
-	path = src/MGF4Boomi
-=======
-	path = lib/MGF4Boomi
->>>>>>> dev
-	url = https://github.com/MarkusSchmidtPro/MGF4Boomi.git
-	branch = dev
