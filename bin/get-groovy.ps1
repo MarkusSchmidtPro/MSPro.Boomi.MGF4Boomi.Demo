@@ -4,33 +4,19 @@
 # ====================================================================================================
 
 
-# ******** MAIN ******************
-
-$groovyVersion = "2.4.13"
-$userhome = $env:homedrive + $env:homepath
-$groovySdkPath =  "$userhome\.groovy\sdk"
-
-if( !(Test-Path $groovySdkPath) ) { 
-    New-Item -ItemType Directory -Path $groovySdkPath 
-}
-Write-Host "Installtion Groovy SDK v$groovyVersion into: $groovySdkPath"
-Get-Groovy $groovySdkPath $groovyVersion 
-
-# ******** MAIN ******************
-
-
-
 function Get-Groovy {
-    Param( [string] $sdkPath)
-    Param( [string] $groovyVersion)
+    Param( [string] $sdkPath, [string] $groovyVersion)
+
+    if( Test-Path $groovySdkPath\groovy-$groovyVersion) { 
+        throw "Groovy SDK $groovyVersion already installed! $groovySdkPath"
+    }
 
     $zipFileName = "apache-groovy-binary-$groovyVersion"
     $url = "https://archive.apache.org/dist/groovy/$groovyVersion/distribution/$zipFileName.zip"
 
     Push-Location
     Set-Location -Path $sdkPath
-    Write-Host Get-Location
-
+    
     Write-Host "Downloading Groovy from $url"
 
     $ProgressPreference = 'SilentlyContinue'
@@ -43,3 +29,15 @@ function Get-Groovy {
 }
 
 
+# ******** MAIN ******************
+
+$groovyVersion = "2.4.13"
+$userhome = $env:homedrive + $env:homepath
+$groovySdkPath =  "$userhome\.groovy\sdk"
+
+New-Item -ItemType Directory -Path $groovySdkPath 
+Write-Host "Installation Groovy SDK v$groovyVersion into: $groovySdkPath"
+Get-Groovy $groovySdkPath $groovyVersion 
+
+
+# ******** MAIN ******************

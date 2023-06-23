@@ -1,17 +1,15 @@
 # ====================================================================================================
-# Usage: .\mgf4boomi.ps1 create <ProjectName>
+# Usage: .\create-project <projectname>
 #
-# This script does these things
-#   0. Create .\Scripts folder
+# This script does ..
 #   1. Download and unzip a Reference Project (project template) from GitHub.
 #   2. Update the local MGF4Boomi sources with the latest source from GitHub
-#   3. Download and store the groovy-2.4.13 libraries from the internet.
-#   4. Create a <ProjectName>.code.workspace, in case you want to use Git with VS-Code
+#   3. Create a <ProjectName>.code.workspace, in case you want to use Git with VS-Code
 # ====================================================================================================
 
 function Get-SampleProject {
 
-    Param( [string] $projectName)
+    $projectName = Split-Path -Path $pwd -Leaf
 
     Push-Location
     # Create project folder
@@ -66,44 +64,10 @@ function Update-Framework {
     Pop-Location
 }
 
-function Get-Groovy {
-    
-    $zipFileName = "apache-groovy-binary-2.4.13"
-    $url = "https://archive.apache.org/dist/groovy/2.4.13/distribution/$zipFileName.zip"
-
-    Push-Location
-
-    if( !(Test-Path .\lib) ) { New-Item -ItemType Directory -Path .\lib }
-    Set-Location -Path .\lib
-    
-    Write-Host "Downloading Groovy from $url"
-
-    $ProgressPreference = 'SilentlyContinue'
-    Invoke-WebRequest $url -OutFile .\$zipFileName.zip
-    $ProgressPreference = 'Continue'
-
-    Expand-Archive .\$zipFileName.zip .\
-    Remove-Item .\$zipFileName.zip
-    Pop-Location
-}
-
 
 # ******** MAIN ******************
 
-if ( $args.Count -ne 2 ) { throw "Usage: .\mgf4boomi.ps1 create projectname" }
+Get-SampleProject 
+Update-Framework
 
-switch( $args[0])
-{
-    "create" { 
-        Get-SampleProject $args[1]
-
-        Update-Framework
-        # Framework is now sub-project of Reference project 
-        if( !(Test-Path .\lib\groovy-2.4.13 )) { Get-Groovy }
-    }
-
-    default { 
-        throw "Unknown parameter: $args[0]. Allowed: create"
-    }
-}
-
+# ******** MAIN ******************
