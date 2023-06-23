@@ -8,6 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="90-MGF4Boomi" />
-    <orderEntry type="library" name="ATOMSphere" level="application" />
+    <orderEntry type="library" name="groovy-2.4.13" level="application" />
   </component>
 </module>
