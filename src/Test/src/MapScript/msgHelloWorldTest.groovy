@@ -8,38 +8,42 @@ import org.junit.Test
 
 
 /**
- * TEST serialization of a DataContext object.
+ * A Test class that contains one or more test methods to test our msgHelloWorld script.
+ * 
+ * For more information on testing see: https://junit.org/junit4/
  */
 @TypeChecked
 class HelloWorldTest {
     
-    // The filename in the 01-MyScript project MapScript folder
-    // that contains the Groovy Script to be tested.
+    // Specify the script's filename that you want to test.
     static final String ScriptFilename = "msgHelloWorld.groovy"
     
-    final MapScript _script = new MapScript(ScriptFilename)
-
 
     /** Your first Map Script test.
      * 
-     * Review the script in ScriptFilename 
-     * to see what the Boomi Groovy Script is supposed to do.
+     * 1. Create a Map script context:
+     *    a) InputParameters
+     *    b) Define an ExecutionUtilContext.mpty() in that case
+     *    c) [optional] Document properties
+     *    
+     * 2. Run (and debug) the script 
      */
     @Test
     void test01() {
-
         //
         // A Map script requires an ExecutionContext and
         // a Map with an entry for each input parameter.
         // The output is another Map containing all output parameters.
         //
-        Map inputParameters = [
+        def inputParameters = [
                 a: 5,
                 b: 7
         ]
-        
-        Map outputParameters = _script.run( ExecutionUtilContexts.empty(), inputParameters)
 
+        final MapScript script = new MapScript(ScriptFilename)
+        def outputParameters = script.run( ExecutionUtilContexts.empty(), inputParameters)
+
+        // Print to console windows and validate results
         println( "Test Total = " + outputParameters.total)
         assert  outputParameters.total == inputParameters.a + inputParameters.b
     }
