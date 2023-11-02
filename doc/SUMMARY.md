@@ -1,7 +1,7 @@
 # Table of contents
 
-* [Getting Started](README.md)
-  * [📋 Groovy for Boomi](<Getting Started 019408ce4279434d934d162b6ed03d4e/MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1.md>)
+* [📋 Groovy for Boomi](README.md)
+* [Getting Started](<Getting Started 019408ce4279434d934d162b6ed03d4e/README.md>)
   * [Pre-Requisites](<Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md>)
   * [Setup a customer project](<Getting Started 019408ce4279434d934d162b6ed03d4e/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md>)
   * [Local disk folder structure](<Getting Started 019408ce4279434d934d162b6ed03d4e/Local disk folder structure d010906aac0344bab591f7bebd243856.md>)
