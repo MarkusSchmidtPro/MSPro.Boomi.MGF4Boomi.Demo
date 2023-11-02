@@ -11,3 +11,11 @@
   * [Test your project setup](<Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Test your project setup 8cfaac77237644e29a4179d91c3cf94e.md>)
 * [Examples](<Examples 58e87663b26241128f005ccaa211405f/README.md>)
   * [Create your first script](<Examples 58e87663b26241128f005ccaa211405f/Create your first script 41cce848f3bb45d4a97ac4765ac12a4a.md>)
+
+## Group 1
+
+* [Page 1](group-1/page-1.md)
+
+***
+
+* [Page 2](page-2.md)
