@@ -26,7 +26,7 @@ layout:
 
 ## Getting Started
 
-Before you can start with your first project you have to check the [pre-requisites](<Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md>).
+Before you can start with your first project you have to check the [pre-requisites](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md>).
 
 The second step is then to prepare your local environment, that you will need to develop and test Groovy scripts.
 
