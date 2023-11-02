@@ -1,12 +1,7 @@
----
-description: Markus’ Groovy Framework for Boomi
-layout: landing
----
+# Getting Started
 
-# 📋 Groovy for Boomi
+Before you can start with your first project you have to check the [pre-requisites](<Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md>).
 
-> **MGF4Boomi → M**arkus’ **G**roovy **F**ramework **for** **Boomi**
+The second step is then to prepare your local environment, that you will need to develop and test Groovy scripts.
 
-All you need to create, debug and test Groovy scripts for Boomi Integration.
-
-Markus Schmidt, Jan-2022 .. Nov-2023
+Last but not least, you will create a project per customer to develop scripts in the context of a customer project.
