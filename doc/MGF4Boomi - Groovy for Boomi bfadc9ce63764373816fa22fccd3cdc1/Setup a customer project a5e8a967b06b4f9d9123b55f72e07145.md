@@ -14,7 +14,7 @@ I recommend having a dedicated directory on your hard-drive for all your Boomi d
 *   Finally you shoudl have got a `Scripts` directory, ready for use.\
 
 
-    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Script directory</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Script directory</p></figcaption></figure>
 
 <details>
 
