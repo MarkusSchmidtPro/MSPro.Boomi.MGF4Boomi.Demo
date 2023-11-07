@@ -40,7 +40,7 @@ Do not click on these yellow bars, yet. We will setup manually!!!
 
 <!---->
 
-*   Actually, we do not need the JDK, the JRE from the ATOM is right for us.\
+*   Actually, we do not need the JDK, the JRE from the ATOM is right for us: `C:\Program Files\Boomi AtomSphere\LocalAtom\jre`\
 
 
     <figure><img src="../.gitbook/assets/Untitled 3.png" alt=""><figcaption></figcaption></figure>
