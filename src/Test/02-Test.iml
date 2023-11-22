@@ -13,5 +13,6 @@
     <orderEntry type="module" module-name="01-MyScript" />
     <orderEntry type="module" module-name="90-MGF4Boomi" />
     <orderEntry type="library" name="groovy-2.4.13" level="application" />
+    <orderEntry type="library" name="bin" level="project" />
   </component>
 </module>
