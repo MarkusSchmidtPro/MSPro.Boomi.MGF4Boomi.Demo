@@ -18,7 +18,7 @@
 
 ### Script Folder
 
-![Untitled](<../MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Local disk folder structure d010906aac0344bab591f7bebd243856/Untitled.png>)
+![Untitled](broken-reference)
 
 | Directory    | Purpose                                                                          |
 | ------------ | -------------------------------------------------------------------------------- |

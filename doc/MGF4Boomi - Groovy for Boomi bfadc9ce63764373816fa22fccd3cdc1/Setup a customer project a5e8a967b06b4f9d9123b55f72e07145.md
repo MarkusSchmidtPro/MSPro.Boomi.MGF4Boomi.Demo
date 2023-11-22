@@ -11,10 +11,14 @@ I recommend having a dedicated directory on your hard-drive for all your Boomi d
 *   **Right**-click the file and _Run with PowerShell_
 
     <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+*   Finally you shoudl have got a `Scripts` directory, ready for use.\
 
 
+    <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Script directory</p></figcaption></figure>
 
-Default
+<details>
+
+<summary>UnauthorizedAccess</summary>
 
 ```jsx
 PS C:\vStudio\BoomiProjects\ABC> **Get-ExecutionPolicy -List**
@@ -30,18 +34,8 @@ MachinePolicy       Undefined
 **> Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser**
 ```
 
-* .\create-project.ps1
-* `+ CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess`
-* Run the script
+</details>
 
-![Untitled](<Getting Started 019408ce4279434d934d162b6ed03d4e/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145/Untitled.png>)
 
-![Untitled](<Getting Started 019408ce4279434d934d162b6ed03d4e/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145/Untitled 1.png>)
-
-Et voilà, the project is ready → [Script Folder](<Local disk folder structure d010906aac0344bab591f7bebd243856.md>)
-
-You can now **open** the `DemoCustomer\**Scripts`\*\* folder with **IntelliJ**
-
-![Untitled](<Getting Started 019408ce4279434d934d162b6ed03d4e/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145/Untitled 2.png>)
 
 [First time setup with IntelliJ](../MGF4Boomi%20-%20Groovy%20for%20Boomi%20bfadc9ce63764373816fa22fccd3cdc1/Getting%20Started%20019408ce4279434d934d162b6ed03d4e/Setup%20a%20customer%20project%20a5e8a967b06b4f9d9123b55f72e07145/First%20time%20setup%20with%20IntelliJ%208996f46e6cbe4fe9aac05d0d0a53dac2.md)
