@@ -29,6 +29,6 @@
 
 <div align="left">
 
-<figure><img src=".gitbook/assets/Untitled (2) (2).png" alt="" width="186"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled (2) (2).png" alt="" width="186"><figcaption></figcaption></figure>
 
 </div>

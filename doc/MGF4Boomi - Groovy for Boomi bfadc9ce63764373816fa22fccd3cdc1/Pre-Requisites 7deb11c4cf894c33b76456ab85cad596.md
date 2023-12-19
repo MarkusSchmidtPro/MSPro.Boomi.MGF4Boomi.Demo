@@ -1,6 +1,6 @@
 ---
 description: One time preparation of your development computer
-cover: ../../.gitbook/assets/nasa_space_shuttle_columbia.jpg
+cover: ../.gitbook/assets/nasa_space_shuttle_columbia.jpg
 coverY: 0
 ---
 
@@ -17,7 +17,7 @@ First of all, you need a local ATOM on your machine. There is no need to start t
 * the ATOM’s binaries (Boomi’s Java libraries) and
 * the bundled Java Run-Time (JRE).
 
-[install-a-local-atom.md](install-a-local-atom.md "mention")
+[install-a-local-atom.md](../readme/pre-requisites-7deb11c4cf894c33b76456ab85cad596/install-a-local-atom.md "mention")
 
 </details>
 
@@ -35,6 +35,6 @@ MGF4Boomi has been developed and tested with [**JetBrains IntelliJ IDEA**](https
 
 Boomi Integration uses **Groovy v2.4.13** to run Groovy scripts, and because you will want to test and debug all your scripts under the same run-time conditions we need the right Groovy SDK for it (v1.5 is not supported).
 
-Normally, the project configuration script takes care that you will have the right version installed. There is **no need to** [**install Groovy manually**](./#groovy-2.4.13-sdk).
+Normally, the project configuration script takes care that you will have the right version installed. There is **no need to** [**install Groovy manually**](<Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md#groovy-2.4.13-sdk>).
 
 </details>
