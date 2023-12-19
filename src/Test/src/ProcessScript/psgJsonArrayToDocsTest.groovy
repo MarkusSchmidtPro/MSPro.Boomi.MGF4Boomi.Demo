@@ -5,7 +5,7 @@ import groovy.json.JsonOutput
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.DataContextHelper
 import msPro.mgf4boomi.Document
-import msPro.mgf4boomi.ExecutionUtilContexts
+import msPro.mgf4boomi.ExecutionContexts
 import msPro.mgf4boomi.ProcessScript
 import org.junit.Test
 
@@ -27,93 +27,83 @@ class psgJsonArrayToDocsTest {
         //
         // Create and init [DPP_JsonArrayName]
         //
-        def ec = new ExecutionUtilContexts()
+        def ec = new ExecutionContexts()
         ec.initAddDynamicProcessProperty('DPP_JsonArrayName', '(root)')
 
         //
         // DataContext with a single document
         //
-        DataContext inDataContext = DataContext.withDocuments(
+        DataContext dc = DataContext.create(
                 [
                         Document.fromFile(TESTDATA_DIR + "sampleArray.json")
                 ]
         )
 
-        DataContextHelper dch = _testScript.run(ec, inDataContext)
-        
+        _testScript.run(dc, ec)
+
         //
         // Check and print test result for each document
         //
         println("Documents after script execution")
-        assert dch.outDocumentCount==4
-        
-        for (int docNo = 0; docNo < dch.outDocumentCount; docNo++) {
+        assert dc.Documents.size() == 4
+
+        for (int docNo = 0; docNo < dc.Documents.size(); docNo++) {
             //Properties docProperties = dataContext.getProperties(docNo);
-            String docText = dch.getOutDocumentText(docNo)
+            String docText = dc.Documents[docNo]
             println('Doc[' + docNo + ']:' + JsonOutput.prettyPrint(docText))
         }
-    } 
+    }
 
     /**
      * Test split single document with some Array items, with no DPP set - default.
      */
     @Test
     void test02() {
-        // Use empty execution context with no DPP
-        def ec = ExecutionUtilContexts.empty()
-
         //
         // DataContext with a single document
         //
-        DataContext inDataContext = DataContext.withDocuments(
+        DataContext dc = DataContext.create(
                 [
                         Document.fromFile(TESTDATA_DIR + "sampleArray.json")
                 ]
         )
 
-        DataContextHelper dch = _testScript.run(ec, inDataContext)
-        
+        _testScript.run(dc)
+
         //
         // Check and print test result for each document
         //
         println("Documents after script execution")
-        assert dch.outDocumentCount==4
-        
-        for (int docNo = 0; docNo < dch.outDocumentCount; docNo++) {
-            //Properties docProperties = dataContext.getProperties(docNo);
-            String docText = dch.getOutDocumentText(docNo)
-            println('Doc[' + docNo + ']:' + JsonOutput.prettyPrint(docText))
+        assert dc.Documents.size() == 4
+
+        int docNo = 0;
+        for (def doc in dc.Documents) {
+            println('Doc[' + docNo++ + ']:' + JsonOutput.prettyPrint(doc.toString()))
         }
     }
 
 
-
     @Test
     void testCustom() {
-        // Use empty execution context with no DPP
-        def ec = ExecutionUtilContexts.empty()
-
         //
         // DataContext with a single document
         //
-        DataContext inDataContext = DataContext.withDocuments(
-                [
-                        Document.fromFile(TESTDATA_DIR + "customerSample.json")
-                ]
-        )
-
-        DataContextHelper dch = _testScript.run(ec, inDataContext)
+        DataContext dc = _testScript.run(
+                DataContext.create(
+                        [
+                                Document.fromFile(TESTDATA_DIR + "customerSample.json")
+                        ]
+                ))
 
         //
         // Check and print test result for each document
         //
         println("Documents after script execution")
-        assert dch.outDocumentCount==2
+        assert dc.Documents == 2
 
-        for (int docNo = 0; docNo < dch.outDocumentCount; docNo++) {
-            //Properties docProperties = dataContext.getProperties(docNo);
-            String docText = dch.getOutDocumentText(docNo)
-            println('Doc[' + docNo + ']:' + JsonOutput.prettyPrint(docText))
+        int docNo = 0;
+        for (def doc in dc.Documents) {
+            println('Doc[' + docNo++ + ']:' + JsonOutput.prettyPrint(doc.toString()))
         }
     }
 }

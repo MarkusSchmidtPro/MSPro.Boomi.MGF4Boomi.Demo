@@ -1,7 +1,7 @@
 package MapScript
 
 import groovy.transform.TypeChecked
-import msPro.mgf4boomi.ExecutionUtilContexts
+import msPro.mgf4boomi.ExecutionContexts
 import msPro.mgf4boomi.MapScript
 import org.junit.Test 
 
@@ -19,13 +19,11 @@ class HelloWorldTest {
     static final String ScriptFilename = "msgHelloWorld.groovy"
     
 
-    /** Your first Map Script test.
+    /** Your first Map Script Test.
      * 
      * 1. Create a Map script context:
      *    a) InputParameters
-     *    b) Define an ExecutionUtilContext.mpty() in that case
-     *    c) [optional] Document properties
-     *    
+     *    b) Define an ExecutionUtilContext.empty() 
      * 2. Run (and debug) the script 
      */
     @Test
@@ -41,7 +39,7 @@ class HelloWorldTest {
         ]
 
         final MapScript script = new MapScript(ScriptFilename)
-        def outputParameters = script.run( ExecutionUtilContexts.empty(), inputParameters)
+        def outputParameters = script.run( ExecutionContexts.default(), inputParameters)
 
         // Print to console windows and validate results
         println( "Test Total = " + outputParameters.total)
