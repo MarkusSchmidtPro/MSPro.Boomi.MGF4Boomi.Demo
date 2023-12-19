@@ -1,20 +1,50 @@
-# Setup a customer project
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-I recommend having a dedicated directory on your hard-drive for all your Boomi documents. Our example folder is called `DemoCustomer`. (I decided to use customer names for Boomi folders to be able to support more than one customer.)
+# Create a new Project
 
-*   [Download the `create-project.ps1` script from GitHub](https://github.com/MarkusSchmidtPro/Boomi.Groovy.ReferenceProject/blob/8022e34655b0c4dd4a641d6f9ec4558e8b60d8a8/bin/create-project.ps1)
+Creating a new project is as simple as **creating a folder and running a PowerShell script**.
 
-    <figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>GitHub</p></figcaption></figure>
-*   Save it into your customer project folder: `DemoCustomer`
+* Use any folder for your _Scripts_ project you like,\
+  for example:  `Boomi.Spaces\MSPro\`
+* [Download the `create-project.ps1` script from GitHub](https://github.com/MarkusSchmidtPro/Boomi.Groovy.ReferenceProject/blob/8022e34655b0c4dd4a641d6f9ec4558e8b60d8a8/bin/create-project.ps1) and&#x20;
+  * save it into that folder.
 
-    <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>Save file to project folder</p></figcaption></figure>
-*   **Right**-click the file and _Run with PowerShell_
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>GitHub</p></figcaption></figure>
 
-    <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
-*   Finally you shoudl have got a `Scripts` directory, ready for use.\
+*   **Right**-click the script file and _Run with PowerShell_
+
+    <div align="left">
+
+    <figure><img src="../.gitbook/assets/image (13).png" alt="" width="330"><figcaption></figcaption></figure>
+
+    </div>
+*   After a couple of seconds you should have got a `Scripts` directory, ready for use.\
 
 
-    <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Script directory</p></figcaption></figure>
+    <div align="left">
+
+    <figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="460"><figcaption><p>Script directory</p></figcaption></figure>
+
+    </div>
+* Start IntellJ Commuinty Edition and open your project
+
+<div align="left">
+
+<figure><img src="../.gitbook/assets/image (3).png" alt="" width="399"><figcaption></figcaption></figure>
+
+</div>
 
 <details>
 

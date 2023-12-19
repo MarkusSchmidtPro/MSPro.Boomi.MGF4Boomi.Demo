@@ -24,14 +24,12 @@ layout:
 **MGF4Boomi → M**arkus’ **G**roovy **F**ramework **for** **Boomi**
 {% endhint %}
 
-## Getting Started
+Please check the [pre-requisites-7deb11c4cf894c33b76456ab85cad596](readme/pre-requisites-7deb11c4cf894c33b76456ab85cad596/ "mention") and [Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md> "mention").
 
-Before you can start with your first project you have to check the [pre-requisites](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md>).
+<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-The second step is then to prepare your local environment, that you will need to develop and test Groovy scripts.
 
-Last but not least, you will create a project per customer to develop scripts in the context of a customer project.
 
 ***
 
-Markus Schmidt, Jan-2022 .. Nov-2023
+Markus Schmidt, 2020 .. Dec-2023

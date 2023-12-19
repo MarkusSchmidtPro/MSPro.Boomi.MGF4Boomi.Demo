@@ -18,8 +18,6 @@
 
 ### Script Folder
 
-![Untitled](broken-reference)
-
 | Directory    | Purpose                                                                          |
 | ------------ | -------------------------------------------------------------------------------- |
 | .idea        | IntelliJ Projectfiles                                                            |
@@ -28,3 +26,9 @@
 | src          | Groovy Source Files                                                              |
 | src\MyScript | Your Groovy Map- and Process-Scripts that you want to use with Boomi AtomSphere. |
 | src\Test     | The Groovy Test files used to run and test your custome scripts.                 |
+
+<div align="left">
+
+<figure><img src=".gitbook/assets/Untitled (2) (2).png" alt="" width="186"><figcaption></figcaption></figure>
+
+</div>
