@@ -23,16 +23,14 @@ class HelloWorldTest {
     @Test
     void test01() {
         //
-        // A Map script requires an ExecutionContext and
-        // a Map with an entry for each input parameter.
+        // A Map script requires a Map 
+        // with an entry for each input parameter.
         // The output is another Map containing all output parameters.
         //
         def inputParameters = [ a: 5,  b: 7 ]
 
         final MapScript script = new MapScript(ScriptFilename)
-        def outputParameters = script.run( 
-          ExecutionUtilContexts.empty(), 
-          inputParameters)
+        def outputParameters = script.run( inputParameters)
 
         // Print to console windows and validate results
         println( "Test Total = " + outputParameters.total)
