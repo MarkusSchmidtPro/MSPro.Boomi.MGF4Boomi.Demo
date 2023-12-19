@@ -1,10 +1,6 @@
-
 import com.boomi.document.scripting.DataContext
-import groovy.json.JsonOutput
 import groovy.transform.TypeChecked
-import msPro.mgf4boomi.DataContextHelper
 import msPro.mgf4boomi.Document
-import msPro.mgf4boomi.ExecutionContexts
 import msPro.mgf4boomi.ProcessScript
 import org.junit.Test
 
@@ -19,19 +15,39 @@ class psgTraceTest {
 
 
     /**
-     * psgTrace with no documents.
+     * Run script with empty DataContext => no documents!
      */
     @Test
     void test01() {
-        // 
-        // Run script with empty DataContext => no documents!
-        //
-        DataContext dc = _testScript.run( DataContext.create() )
+        DataContext dc = _testScript.run(DataContext.create())
+        Helper.printTextDocuments(dc)
+    }
 
-        int docNo = 0;
-        for (def doc in dc.Documents) {
-            println('Doc[' + docNo++ + ']:' + JsonOutput.prettyPrint(doc.toString()))
-        }
 
-    } 
+    /**
+     * Run script with two Strings as documents!
+     */
+    @Test
+    void test02() {
+        DataContext dc = _testScript.run(DataContext.create([
+                Document.fromText("Document A"),
+                Document.fromText("Document B"),
+        ]))
+        Helper.printTextDocuments(dc)
+    }
+
+    /**
+     * Run script with two Strings as documents, each Document with a DDP_V1, DDP_V2 attached
+     */
+    @Test
+    void test03() {
+        DataContext dc = _testScript.run(DataContext.create([
+                Document.fromText("Document A",
+                        /* DDPs: */ [DDP_V1: "Doc1 V1", DDP_V2: "Doc1 V2"]),
+                Document.fromText("Document B",
+                        /* DDPs: */ [DDP_V1: "Doc2 V1", DDP_V2: "Doc2 V2"]),
+        ]))
+        Helper.printTextDocuments(dc)
+    }
 }
+//* {@see https://help.boomi.com/bundle/integration/page/c-atm-Groovy_Accessing_process_properties.html}
