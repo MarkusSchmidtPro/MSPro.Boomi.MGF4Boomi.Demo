@@ -24,7 +24,7 @@ layout:
 
 Do not forget to **copy your installation token**
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>You will need the installation token later</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>You will need the installation token later</p></figcaption></figure>
 
 Chose a good installation path:
 

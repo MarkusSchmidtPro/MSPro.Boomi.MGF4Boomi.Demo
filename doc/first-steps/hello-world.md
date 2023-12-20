@@ -8,47 +8,51 @@ description: A closer look at the Hello World Map Script
 
 The Test serves as a host, as a starting point. You cannot execute a process or map script directly. You need a Test, that creates and provides the execution environment for your script to test.
 
-A single Test Class can contain one or mare test functions.&#x20;
+{% hint style="info" %}
+A single Test class can contain one or mare `@Test` functions. This makes sense if you want to Unit Test your scripts. \
+I do normally start with one or two tests functions (incl. edge tests), to debug and test what I am developing.\
+Over the time, when my script evolves and gets new functionality, I add new Tests. At the end of the day, you always want to run _all_ tests successfully. The old ones, because you want to ensure the script's behaviours has not changed, and the new ones, to ensure the new functionality works properly.
+{% endhint %}
 
-This is what you run: **`@Test void test01()`** (see below)\
-and the test then calls the referenced `ScriptFilename`.
+This is what you run: **`@Test void test01()`**and the test then calls the referenced _MapScript_.
 
 ```groovy
-@TypeChecked
-class HelloWorldTest {
-    
-    // Specify the script's filename that you want to test.
-    static final String ScriptFilename = "msgHelloWorld.groovy"
-    
+class HelloWorld_Test 
+{
+    // Specify the Boomi Script that your want to test in this class.
+    final MapScript _testScript = new MapScript("msgHelloWorld.groovy")
+
     @Test
     void test01() {
-        //
-        // A Map script requires a Map 
-        // with an entry for each input parameter.
-        // The output is another Map containing all output parameters.
-        //
-        def inputParameters = [ a: 5,  b: 7 ]
 
-        final MapScript script = new MapScript(ScriptFilename)
-        def outputParameters = script.run( inputParameters)
+        HashMap scriptContext = [
+                a: 5,
+                b: 7
+        ]
+        _testScript.run(scriptContext)
+
+        // -----------------------------------------------------
+        // Perform your tests here to check whether the script 
+        // execution met your expectation.
+        assert scriptContext.total != null, "Script did not set 'total' as output parameter!"
+        assert scriptContext.total == scriptContext.a + scriptContext.b, "Calculation result does not meet expectations!"
 
         // Print to console windows and validate results
-        println( "Test Total = " + outputParameters.total)
-        assert  outputParameters.total == inputParameters.a + inputParameters.b
+        println("Test Total = " + scriptContext.total)
     }
 }
 ```
 
 ## The Script
 
-The script is placed in the _MyScripts_ folder, which contains all your Boomi scripts as they are copied and pasted into Boomi. Let's check the _HelloWorld_ Map Script.
+The script is placed in the _MyScripts_ project, which contains all your Boomi scripts as they are copied and pasted into Boomi. Let's check the _HelloWorld_ Map Script.
 
 ```groovy
 import com.boomi.execution.ExecutionUtil
 
 final String SCRIPT_NAME = "msgHelloWorld"
 
-_logger = ExecutionUtil.getBaseLogger()
+final _logger = ExecutionUtil.getBaseLogger()
 _logger.info('>>> Start Script ' + SCRIPT_NAME)
 
 // This is the script's logic - not much - but anyways...
@@ -60,11 +64,11 @@ _logger.info('<<< End Script')
 
 ```
 
-If you look at the Test above, you will see that it defines the `inputParameters [a=5, b=7]`. Then the script builds the total and it does some logging. That's it.
+If you look at the Test above, you will see that the Test defines the `inputParameters [a=5, b=7]`. Then the script builds the total and it does some logging. That's it.
 
 ## The Debug Window
 
-Run / Debug the Test!
+**Debug** the Test! Debugging will alow you to stop on breakpoints or to see variables.
 
 <div align="left">
 
@@ -80,17 +84,11 @@ Forget about those WARNINGs. You cannot get rid of them. They appear because Gro
 
 You can see all logs and outputs in the debug window. There is also the **Threads & Variables** Windows that you will use if you work with breakpoints to see your variables and data.
 
-<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
-
-## How to use in Boomi
-
-To use the tested script in Boomi, create a _Map Script Component_ (**Groovy v2.4**), copy and paste the Script's code - and enjoy!
-
-<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 ## Breakpoint
 
-Set a breakpoint in your script and **Debug** the Test again. The execution stops on the calculation line. Watch you variables:
+Set a breakpoint in your script (left-click on the row-number where you want to stop) and **Debug** the Test again. The execution stops on the calculation line. Watch you variables:
 
 <figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 

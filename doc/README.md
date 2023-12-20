@@ -1,6 +1,6 @@
 ---
-description: Create, debug and test Groovy scripts for Boomi Integration.
-cover: .gitbook/assets/photo-1482062364825-616fd23b8fc1.jpeg
+description: Develop, debug and test Groovy scripts for Boomi Integration.
+cover: .gitbook/assets/image (1).png
 coverY: 0
 layout:
   cover:
@@ -20,15 +20,44 @@ layout:
 
 # 📋 Groovy for Boomi
 
-{% hint style="warning" %}
+Everyone who has ever developed a Script for Boomi Integration knows how painful  and error-prone this process is.&#x20;
+
+<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption><p>Develop Scipts with IntelliJ</p></figcaption></figure>
+
+{% hint style="success" %}
 **MGF4Boomi → M**arkus’ **G**roovy **F**ramework **for** **Boomi**
+
+_MGF4Boomi_ is a small framework that enables you to develop, debug and test Groovy Scripts on your local machine, to finally copy and paste them into the platform.
 {% endhint %}
 
-Please check the [Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md> "mention") and [Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md> "mention").
+[**Get it from here!**](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md>)
 
-<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+## Benefits
 
+MGF4Boomi brings the following advantages (without any disadvantage):
 
+* Develop Scipts in a full-features IDE (IntelliJ)
+  * with syntax highlightning
+  * code completion
+  * error checking etc.
+* Full support for&#x20;
+  * Documents&#x20;
+  * Dynamic Document Properties
+  * Process and&#x20;
+  * Dynamic Process Properties
+  * Logging
+* Debug your scripts
+  * set breakpoints
+  * go single-step
+  * debug variables
+* Log your message to the console
+* Write Unit Test
+  * to ensure your scripts still provide the same expected results
+  * in all scenarios
+
+### Disadvantages?
+
+The learning curve! But wait, if you want to do fancy scripting there isno way to avoid that!
 
 ***
 
