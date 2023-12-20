@@ -1,4 +1,4 @@
-package ProcessScript
+package processScript
 
 /// *************** COPY AND PASTE FROM HERE *****************
 import com.boomi.execution.ExecutionUtil
@@ -9,11 +9,10 @@ final String SCRIPT_NAME = "psgJsonArrayToDocs"
 
 
 /* **************************************************************************
-    A process script that iterates through each document,
-    which must be of type JSON profile.
-
+    A process script that iterates over all documents of any JSON profile type.
+    
     For each document,
-        it searches for the JSON-Array @DPP_JsonArrayName and 
+        the script searches for the JSON-Array @DPP_JsonArrayName and 
         creates a new output document for each object in that array.
         
         The number of output documents is number of 
@@ -52,11 +51,19 @@ try {
         def jsonDocument = slurper.parseText(document)
 
         def jsonArray = jsonGetSection(jsonDocument, _sections)
-        if (jsonArray != null) {
+        if (jsonArray != null) 
+        {
             if (!(jsonArray instanceof ArrayList))
                 throw new Exception("Section $jsonArrayElementName is not of type ArrayList!")
 
-            for (int i = 0; i < jsonArray.size(); i++) {
+            // Create a new document from each Array element and 
+            // write it to the output stream.
+            // Because the number of input documents does not match 
+            // the number of output documents, we cannot keep the input 
+            // dynamic document properties and we must create a new, empty set of DDP 
+            // for each output document: new Properties()
+            for (int i = 0; i < jsonArray.size(); i++) 
+            {
                 _setTextDocument(dataContext,
                         JsonOutput.toJson(jsonArray[i]),
                         new Properties())
@@ -82,24 +89,6 @@ static void _setTextDocument(dataContext, String value, Properties props) {
     InputStream newDocumentStream = new ByteArrayInputStream(value.getBytes("UTF-8"))
     dataContext.storeStream(newDocumentStream, props)
 }
-
-/**
- Get a mandatory Dynamic Process Property.
-
- @param propName
-  The name of the Dynamic Process Property.
- @return
-  The property value.
- @throws
-  Exception in case the property does not exist or 
-  its value is blank (is not initialized).
- */
-String _getDPPSafe(String propName) {
-    String propValue = _getDPP(propName)
-    if (propValue == null) throw new Exception(propName + ' not set!')
-    return propValue
-}
-
 
 /**
  Get a Dynamic Process Property.

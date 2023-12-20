@@ -1,9 +1,8 @@
-package ProcessScript
+package processScript
 
 /// *************** COPY AND PASTE FROM HERE *****************
 
 import com.boomi.execution.ExecutionUtil
-import groovy.json.JsonOutput
 
 final String SCRIPT_NAME = "psgTrace"
 
@@ -37,6 +36,21 @@ try {
 
         _logger.info("Doc[$docNo]=$docText")
         for (def ddp in dynDocProperties) _logger.info("-- ${ddp.key}=\"${ddp.value}\"")
+        
+        // Don't forget to use the userDefinedPropertyBase as the root path to the DDPs
+        String ddpV1 = dynDocProperties[ userDefinedPropertyBase + "DDP_V1"]
+        if( ddpV1 == null) {
+            // In a real application you will want to throw an exception 
+            // if mandatory DDP are not defined. YOu throw that exception because the script
+            // cannot do anything meaningful without the property. 
+            // ---- throw new Exception( "DDP_V1 is not defined!")
+            
+            // If you write a message to the logs, this will appear, of course, in the Boomi logs, too.
+            // However, the script (and also the process) will continue without notice that
+            // something went wrong.
+            _logger.severe("DDP_V1 is not defined!")
+        }
+        else _logger.info("DDP_V1='$ddpV1'") 
        
 
         // ******** end of Script functionality ********

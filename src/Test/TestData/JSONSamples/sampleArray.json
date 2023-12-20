@@ -1,26 +1,23 @@
-[
-  {
-    "plz": 47441,
-    "city": "Moers",
-    "lattitude": 51.4463,
-    "longitude": 6.6396
-  },
-  {
-    "plz": 47798,
-    "city": "Krefeld",
-    "lattitude": 51.3311,
-    "longitude": 6.5616
-  },
-  {
-    "plz": 47051,
-    "city": "Duisburg",
-    "lattitude": 51.3311,
-    "longitude": 6.5616
-  },
-  {
-    "plz": 45127,
-    "city": "Essen",
-    "latitude": 51.4535,
-    "longitude": 7.0102
-  }
-]
+{
+  "Element0": "Markus",
+  "MyArray": [
+    {
+      "plz": 47441,
+      "city": "Moers",
+      "lattitude": 51.4463,
+      "longitude": 6.6396
+    },
+    {
+      "plz": 47798,
+      "city": "Krefeld",
+      "lattitude": 51.3311,
+      "longitude": 6.5616
+    },
+    {
+      "plz": 47051,
+      "city": "Duisburg",
+      "lattitude": 51.3311,
+      "longitude": 6.5616
+    }
+  ]
+}

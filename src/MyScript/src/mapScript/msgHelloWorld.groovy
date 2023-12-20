@@ -1,13 +1,13 @@
-package MapScript
+package mapScript
 
 import com.boomi.execution.ExecutionUtil
 
 // Give the script a meaningful name
-// Start with msg -> Message Script
+// Start with msg -> Message Script Groovy
 final String SCRIPT_NAME = "msgHelloWorld"
 
 /** ================================================================================== 
-    The hello world script logs the current AtomID (taken from the execution context).
+    The Hello World MapScript logs the current AtomID (taken from the execution context).
     Then it does some math.
  
     INPUT Parameters (DataContext):
@@ -23,32 +23,28 @@ final String SCRIPT_NAME = "msgHelloWorld"
 */
 
 // Get a logger instance that can be used to log messages 
-// to the Boomi Platform (-> Process Reporting) 
-_logger = ExecutionUtil.getBaseLogger()
+def _logger = ExecutionUtil.getBaseLogger()
 _logger.info('>>> Start Script ' + SCRIPT_NAME)
 
 try {
     /*
      * Get the runtime execution properties and save into local variables.
+     * Write information to process reporting (in Boomi) 
+     * or to the debug windows when testing.
      */
-    String executionId = ExecutionUtil.getRuntimeExecutionProperty('EXECUTION_ID')
-    String processId = ExecutionUtil.getRuntimeExecutionProperty('PROCESS_ID')
-    String processName = ExecutionUtil.getRuntimeExecutionProperty('PROCESS_NAME')
-    String atomId = ExecutionUtil.getRuntimeExecutionProperty("ATOM_ID")
-    
-    // Write information to process reporting
-    _logger.fine("atom id: " + atomId)
-    _logger.fine('A=' + a)
-    _logger.fine('B=' + b)
+     String atomId = ExecutionUtil.getRuntimeExecutionProperty("ATOM_ID")
+    _logger.fine("Atom-ID: $atomId")
 
-    // This is the script's logic - not much - but anyways...
+    // This is the script's logic - not too much ...
     total = a + b
     
     // Log the result and the end of the execution to process reporting
-    _logger.info("Total: " + total)
+    _logger.info("$a + $b = $total")
     _logger.info('<<< End Script')
 }
 catch (Exception e) {
+    // In case of a script exception, we log the message and 
+    // re-throw the exception to let it pop up in the platform.
     _logger.severe(e.message)
     throw e
 }

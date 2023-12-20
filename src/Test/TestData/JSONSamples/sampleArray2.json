@@ -1,0 +1,11 @@
+{
+  "Element0": "Schmidt",
+  "MyArray": [
+    {
+      "plz": 45127,
+      "city": "Essen",
+      "latitude": 51.4535,
+      "longitude": 7.0102
+    }
+  ]
+}
