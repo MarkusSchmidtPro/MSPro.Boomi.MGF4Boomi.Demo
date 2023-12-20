@@ -1,5 +1,7 @@
 package processScript
 
+import com.boomi.document.scripting.DataContext
+
 /// *************** COPY AND PASTE FROM HERE *****************
 
 import com.boomi.execution.ExecutionUtil
@@ -26,12 +28,12 @@ try {
 
     // Retrieve Dynamic Process Property value
     final String propName = "DPP_DateTime"
-    def propValue = ExecutionUtil.getDynamicProcessProperty(propName);
+    def propValue = ExecutionUtil.getDynamicProcessProperty(propName)
     _logger.info("$propName = '$propValue'")
 
     // Access a not defined Property and write a WARNING
     final String propName2 = "unknown"
-    def propUnknown = ExecutionUtil.getDynamicProcessProperty(propName2);
+    def propUnknown = ExecutionUtil.getDynamicProcessProperty(propName2)
     if( propUnknown == null) _logger.warning("Unknown Dynamic Process Property: $propName2")
 
     // You can also set a DynamicProcessProperty
@@ -39,7 +41,7 @@ try {
     //   assert ec.dynamicProcessProperties.DPP_out == true
     // Here we set DPP_Out = true
     final String propName3 = "DPP_Out"
-    ExecutionUtil.setDynamicProcessProperty(propName3, true, false);
+    ExecutionUtil.setDynamicProcessProperty(propName3, true, false)
 
     // ------------------------------------------------------
     // MANDATORY!!!

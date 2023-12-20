@@ -25,14 +25,14 @@ try {
     
     final String COMPONENT_ID   = "8fb41f63-a988-4778-8cc8-0144f30ace81"
     final String VAL1_ID        = "eea9e988-cb14-4a84-ba37-ee455451a741"
-    final String VAL2_ID        = "2c68fb60-8431-46cc-9da9-cbe10d446a0e"
+    //final String VAL2_ID        = "2c68fb60-8431-46cc-9da9-cbe10d446a0e"
 
     // Retrieve a Process Property component value
-    def myValue = ExecutionUtil.getProcessProperty( COMPONENT_ID, VAL1_ID);
+    def myValue = ExecutionUtil.getProcessProperty( COMPONENT_ID, VAL1_ID)
     _logger.info("pp.MyProcess.Val1=$myValue")
     
     // Set a Process Property component value
-    ExecutionUtil.setProcessProperty(COMPONENT_ID, VAL1_ID, myValue+1);
+    ExecutionUtil.setProcessProperty(COMPONENT_ID, VAL1_ID, myValue+1)
 
 
     // ------------------------------------------------------

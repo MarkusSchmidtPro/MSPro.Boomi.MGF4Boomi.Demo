@@ -1,5 +1,4 @@
 package processScript
-
 /// *************** COPY AND PASTE FROM HERE *****************
 import com.boomi.execution.ExecutionUtil
 import groovy.json.JsonOutput
@@ -50,12 +49,13 @@ try {
         String document = _getTextDocument(dataContext, docNo)
         def jsonDocument = slurper.parseText(document)
 
-        def jsonArray = jsonGetSection(jsonDocument, _sections)
-        if (jsonArray != null) 
+        def jsonObject = jsonGetSection(jsonDocument, _sections)
+        if (jsonObject != null) 
         {
-            if (!(jsonArray instanceof ArrayList))
+            if (!(jsonObject instanceof ArrayList))
                 throw new Exception("Section $jsonArrayElementName is not of type ArrayList!")
 
+            ArrayList jsonArray = (ArrayList) jsonObject
             // Create a new document from each Array element and 
             // write it to the output stream.
             // Because the number of input documents does not match 
@@ -99,12 +99,12 @@ static void _setTextDocument(dataContext, String value, Properties props) {
   The property value or [null] in case the property does not exist or 
   its value is blank (is not initialized).
  */
-String _getDPP(String propName) {
+static String _getDPP(String propName) {
     String propValue = ExecutionUtil.getDynamicProcessProperty(propName)
     return (propValue == null || propValue.length() == 0) ? null : propValue
 }
 
-def jsonGetSection(def root, String[] sections) {
+static def jsonGetSection(def root, String[] sections) {
     def current = root
     for (int i = 0; i < sections.size(); i++) {
         if (null == current[sections[i]]) return null

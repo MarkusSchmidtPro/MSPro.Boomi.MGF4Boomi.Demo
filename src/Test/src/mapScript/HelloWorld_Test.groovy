@@ -1,4 +1,3 @@
-package mapScript
 
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.MapScript
