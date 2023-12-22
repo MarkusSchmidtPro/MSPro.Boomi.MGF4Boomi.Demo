@@ -1,3 +1,4 @@
+package processScript.processProperties
 
 import com.boomi.document.scripting.DataContext
 import groovy.transform.TypeChecked
@@ -24,7 +25,7 @@ class Properties_DPP_Test {
      */
     @Test
     void test01() {
-
+        def f = new File('psgProperties_DPP.groovy')
         //
         // Add Dynamic Process Properties to the execution context.
         // and pass it to the script execution.

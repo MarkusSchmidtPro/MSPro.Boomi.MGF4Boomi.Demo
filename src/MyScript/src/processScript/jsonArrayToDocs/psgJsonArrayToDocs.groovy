@@ -1,4 +1,4 @@
-package processScript
+package processScript.jsonArrayToDocs
 /// *************** COPY AND PASTE FROM HERE *****************
 import com.boomi.execution.ExecutionUtil
 import groovy.json.JsonOutput

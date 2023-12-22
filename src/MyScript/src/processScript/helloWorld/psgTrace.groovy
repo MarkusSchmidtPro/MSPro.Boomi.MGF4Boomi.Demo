@@ -1,4 +1,4 @@
-package processScript
+package processScript.helloWorld
 
 /// *************** COPY AND PASTE FROM HERE *****************
 

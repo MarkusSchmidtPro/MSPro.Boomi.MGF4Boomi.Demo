@@ -1,7 +1,4 @@
-package processScript
-
-import com.boomi.document.scripting.DataContext
-
+package processScript.processProperties
 /// *************** COPY AND PASTE FROM HERE *****************
 
 import com.boomi.execution.ExecutionUtil

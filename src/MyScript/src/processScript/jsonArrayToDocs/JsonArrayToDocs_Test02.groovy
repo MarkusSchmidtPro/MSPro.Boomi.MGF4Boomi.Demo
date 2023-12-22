@@ -1,6 +1,6 @@
+package processScript.jsonArrayToDocs
 
 import com.boomi.document.scripting.DataContext
-import groovy.json.JsonOutput
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.Document
 import msPro.mgf4boomi.ExecutionContexts
@@ -14,7 +14,6 @@ import org.junit.Test
 class JsonArrayToDocs_Test02 {
 
     final ProcessScript _testScript = new ProcessScript('psgJsonArrayToDocs.groovy')
-    final String TESTDATA_DIR = 'TestData/JSONSamples/'
 
 
     /**
@@ -24,11 +23,11 @@ class JsonArrayToDocs_Test02 {
     void test01() {
         DataContext dc = DataContext.create(
                 [
-                        Document.fromFile(TESTDATA_DIR + "sampleArray.json"),
-                        Document.fromFile(TESTDATA_DIR + "sampleArray2.json"),
+                        Document.fromFile( "sampleArray.json"),
+                        Document.fromFile( "sampleArray2.json"),
                         // File No3 does not contain an Array (=null)
                         // Edge test for the script!!
-                        Document.fromFile(TESTDATA_DIR + "sampleArray3.json")
+                        Document.fromFile( "sampleArray3.json")
                 ]
         )
 

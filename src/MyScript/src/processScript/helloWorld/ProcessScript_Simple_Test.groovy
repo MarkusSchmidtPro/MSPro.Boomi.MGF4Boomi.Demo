@@ -1,3 +1,5 @@
+package processScript.helloWorld
+
 import com.boomi.document.scripting.DataContext
 import msPro.mgf4boomi.tests.TestHelper
 import groovy.transform.TypeChecked

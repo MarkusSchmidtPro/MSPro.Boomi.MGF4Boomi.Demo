@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/src/MyScript/01-MyScript.iml" filepath="$PROJECT_DIR$/src/MyScript/01-MyScript.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/Test/02-Test.iml" filepath="$PROJECT_DIR$/src/Test/02-Test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib/MGF4Boomi/90-MGF4Boomi.iml" filepath="$PROJECT_DIR$/lib/MGF4Boomi/90-MGF4Boomi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/MGF4Boomi/MGF4Boomi.iml" filepath="$PROJECT_DIR$/lib/MGF4Boomi/MGF4Boomi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/MyScript/MyScripts.iml" filepath="$PROJECT_DIR$/src/MyScript/MyScripts.iml" />
     </modules>
   </component>
 </project>

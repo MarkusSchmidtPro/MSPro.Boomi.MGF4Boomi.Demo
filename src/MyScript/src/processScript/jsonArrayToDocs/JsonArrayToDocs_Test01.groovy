@@ -1,3 +1,4 @@
+package processScript.jsonArrayToDocs
 
 import com.boomi.document.scripting.DataContext
 import msPro.mgf4boomi.tests.TestHelper
@@ -15,7 +16,7 @@ import org.junit.Test
 @TypeChecked
 class JsonArrayToDocs_Test01 {
 
-    final ProcessScript _testScript = new ProcessScript('psgJsonArrayToDocs.groovy')
+    final ProcessScript _testScript = new ProcessScript('PSGJsonArrayToDocs.groovy')
 
     /**
      * Test split single document with some Array items, using "(root)".
