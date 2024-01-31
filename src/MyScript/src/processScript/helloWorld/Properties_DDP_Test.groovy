@@ -13,7 +13,7 @@ import org.junit.Test
 @TypeChecked
 class Properties_DDP_Test {
 
-    final ProcessScript _testScript = new ProcessScript('psgTrace.groovy')
+    final ProcessScript _testScript = new ProcessScript("psgTrace.groovy", "helloWorld")
 
     /**
      * Run script with two Strings as documents, 

@@ -5,6 +5,9 @@
 #   1. Download and unzip a Reference Project (project template) from GitHub.
 #   2. Update the local MGF4Boomi sources with the latest source from GitHub
 #   3. Create a <ProjectName>.code.workspace, in case you want to use Git with VS-Code
+# ----------------------------------------------------------------------------------------------------
+#   2024-01-31  msc -   $ProgressPreference = 'SilentlyContinue'
+#   2022-05-04  msc -   Created
 # ====================================================================================================
 
 function Get-SampleProject {
@@ -31,12 +34,14 @@ function Get-SampleProject {
     #if( Test-Path ".\$GitHubProject-$Branch" ) { throw "Folder exists: $GitHubProject-$Branch"}
 
     Write-Host "Downloading from GitHub $GitHubProject"
+    $ProgressPreference = 'SilentlyContinue'
     Invoke-WebRequest $url -OutFile .\$projectName.zip
 
     Write-Host      "Unzipping $projectName.zip to .\$GitHubProject-$Branch"
     Expand-Archive  .\$projectName.zip .\
     Remove-Item     .\$projectName.zip
-
+    
+    Start-Sleep -Seconds 1.5
     Write-Host      "Renaming target folder to $scriptFolder"
     Rename-Item     -Path ".\$GitHubProject-$Branch" -NewName ".\$scriptFolder"
 
@@ -56,6 +61,8 @@ function Update-Framework {
     Push-Location
     Set-Location -Path .\lib
     Write-Host "Downloading MGF4Boomi from $url"
+    
+    $ProgressPreference = 'SilentlyContinue'
     Invoke-WebRequest $url -OutFile .\$projectName.zip
     Remove-Item .\$projectName              # Create because it is s sub-project of Reference project
     Expand-Archive .\$projectName.zip .\    # to MGF4Boomi-main

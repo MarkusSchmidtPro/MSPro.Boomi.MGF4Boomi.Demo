@@ -13,7 +13,7 @@ import org.junit.Test
 @TypeChecked
 class ProcessScript_Simple_Test {
 
-    final ProcessScript _testScript = new ProcessScript('psgTrace.groovy')
+    final ProcessScript _testScript = new ProcessScript("psgTrace.groovy", "helloWorld")
 
 
     /**

@@ -14,7 +14,7 @@ import org.junit.Test
 @TypeChecked
 class Properties_DPP_Test {
 
-    final ProcessScript _testScript = new ProcessScript('psgProperties_DPP.groovy')
+    final ProcessScript _testScript = new ProcessScript("/psgProperties_DPP.groovy","processProperties")
 
     /**
      * Run script with two Strings as documents, no dynamic document properties.

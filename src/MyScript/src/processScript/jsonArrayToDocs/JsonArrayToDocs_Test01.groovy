@@ -16,7 +16,7 @@ import org.junit.Test
 @TypeChecked
 class JsonArrayToDocs_Test01 {
 
-    final ProcessScript _testScript = new ProcessScript('PSGJsonArrayToDocs.groovy')
+    final ProcessScript _testScript = new ProcessScript("PSGJsonArrayToDocs.groovy", "jsonArrayToDocs")
 
     /**
      * Test split single document with some Array items, using "(root)".

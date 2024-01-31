@@ -13,7 +13,7 @@ import org.junit.Test
 @TypeChecked
 class JsonArrayToDocs_Test02 {
 
-    final ProcessScript _testScript = new ProcessScript('psgJsonArrayToDocs.groovy')
+    final ProcessScript _testScript = new ProcessScript("psgJsonArrayToDocs.groovy", "jsonArrayToDocs")
 
 
     /**

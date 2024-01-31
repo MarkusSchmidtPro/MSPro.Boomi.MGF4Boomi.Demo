@@ -15,7 +15,7 @@ import org.junit.Test
 @TypeChecked
 class Properties_PP_Test {
 
-    final ProcessScript _testScript = new ProcessScript('psgProperties_PP.groovy')
+    final ProcessScript _testScript = new ProcessScript("/psgProperties_PP.groovy","processProperties")
 
     // You may put all your Process Property IDs in a separate file so that 
     // you can use and share them in all your tests!
