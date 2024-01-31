@@ -14,6 +14,12 @@ layout:
 
 # Create a new Project
 
+{% hint style="danger" %}
+<mark style="color:red;">**DO NOT create your project on a Google Drive Synced folder.**</mark>
+
+<mark style="color:blue;">G-Drive folders are not appropriate for development purposes because G-Drive keeps locks on files and folders which will lead to unpredictable results.</mark>
+{% endhint %}
+
 {% hint style="info" %}
 To get started, you simply **create a new project** as described below.
 
