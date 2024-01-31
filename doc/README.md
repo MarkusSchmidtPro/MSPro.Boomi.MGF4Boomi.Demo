@@ -22,8 +22,6 @@ layout:
 
 Everyone who has ever developed a Script for Boomi Integration knows how painful  and error-prone this process is.&#x20;
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption><p>Develop Scipts with IntelliJ</p></figcaption></figure>
-
 {% hint style="success" %}
 **MGF4Boomi → M**arkus’ **G**roovy **F**ramework **for** **Boomi**
 
@@ -36,6 +34,9 @@ _MGF4Boomi_ is a small framework that enables you to develop, debug and test Gro
 
 MGF4Boomi brings the following advantages (without any disadvantage):
 
+*
+
+    <figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption><p>Develop Scipts with IntelliJ</p></figcaption></figure>
 * Develop Scipts in a full-features IDE (IntelliJ)
   * with syntax highlightning
   * code completion
