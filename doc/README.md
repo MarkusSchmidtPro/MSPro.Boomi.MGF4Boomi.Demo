@@ -1,7 +1,7 @@
 ---
 description: Develop, debug and test Groovy scripts for Boomi Integration.
 cover: .gitbook/assets/image (1).png
-coverY: 0
+coverY: -48.42809364548495
 layout:
   cover:
     visible: true
