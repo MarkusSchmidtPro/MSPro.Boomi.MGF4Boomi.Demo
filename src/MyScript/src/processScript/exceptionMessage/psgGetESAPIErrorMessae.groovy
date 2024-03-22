@@ -1,4 +1,4 @@
-package ProcessScript.exceptionMessage
+package processScript.exceptionMessage
 
 /// *************** COPY AND PASTE FROM HERE *****************
 import com.boomi.execution.ExecutionUtil

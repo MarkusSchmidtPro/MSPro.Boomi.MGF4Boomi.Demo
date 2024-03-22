@@ -1,4 +1,4 @@
-package ProcessScript.exceptionMessage
+package processScript.exceptionMessage
 
 import com.boomi.document.scripting.DataContext
 import groovy.transform.TypeChecked

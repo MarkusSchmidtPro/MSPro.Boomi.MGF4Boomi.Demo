@@ -1,4 +1,4 @@
-package ProcessScript.inMemoryCache
+package processScript.inMemoryCache
 
 import com.boomi.document.scripting.DataContext
 import groovy.transform.TypeChecked

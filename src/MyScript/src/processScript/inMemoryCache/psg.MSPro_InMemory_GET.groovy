@@ -1,4 +1,4 @@
-package ProcessScript.inMemoryCache
+package processScript.inMemoryCache
 
 /// *************** COPY AND PASTE FROM HERE *****************
 import com.boomi.execution.ExecutionUtil
