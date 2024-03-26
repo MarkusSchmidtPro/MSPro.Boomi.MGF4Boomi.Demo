@@ -23,11 +23,11 @@ class JsonArrayToDocs_Test02 {
     void test01() {
         DataContext dc = DataContext.create(
                 [
-                        Document.fromFile( "sampleArray.json"),
-                        Document.fromFile( "sampleArray2.json"),
+                        Document.fromFile( new File("sampleArray.json")),
+                        Document.fromFile( new File("sampleArray2.json")),
                         // File No3 does not contain an Array (=null)
                         // Edge test for the script!!
-                        Document.fromFile( "sampleArray3.json")
+                        Document.fromFile( new File("sampleArray3.json"))
                 ]
         )
 

@@ -35,7 +35,7 @@ class KeyValueTest {
         // Fill keyValue cache
         //
         final ProcessScript setScript = new ProcessScript('/psg.MSPro_InMemory_SET.groovy', "InMemoryCache")
-        def dc = setScript.run(DataContext.create([
+        setScript.run(DataContext.create([
                 // Create document with response objects
                 Document.fromText( "empty document 1", [ DDP_Key : responseCache.keySet()[0], DDP_Value : responseCache.values()[0] ] ),
                 Document.fromText( "empty document 2", [ DDP_Key : responseCache.keySet()[1], DDP_Value : responseCache.values()[1] ] )
@@ -48,7 +48,7 @@ class KeyValueTest {
         String valuePropertyName = "DDP_MyValue"
         ec.dynamicProcessProperties.DPP_ValuePropertyName = valuePropertyName
         final ProcessScript getScript = new ProcessScript('/psg.MSPro_InMemory_GET.groovy', "InMemoryCache")
-        dc = getScript.run(DataContext.create([
+        def dc = getScript.run(DataContext.create([
                 // Create document with response objects
                 Document.fromText( "empty document 1" , [ DDP_Key : responseCache.keySet()[0] ]),
                 Document.fromText( "empty document 2" , [ DDP_Key : responseCache.keySet()[1] ])
