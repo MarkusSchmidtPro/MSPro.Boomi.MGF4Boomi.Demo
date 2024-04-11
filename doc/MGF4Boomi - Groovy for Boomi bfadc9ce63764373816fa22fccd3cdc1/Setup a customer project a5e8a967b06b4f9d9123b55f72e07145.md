@@ -34,13 +34,13 @@ Creating a new project is as simple as **creating a folder and running a PowerSh
 * [Download the **`create-project.ps1`** script from GitHub](https://github.com/MarkusSchmidtPro/Boomi.Groovy.ReferenceProject/blob/main/bin/create-project.ps1) and&#x20;
   * save it into that folder.
 
-<figure><img src="broken-reference" alt=""><figcaption><p>GitHub</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled.png" alt=""><figcaption><p>GitHub</p></figcaption></figure>
 
 *   **Right**-click the script file and _Run with PowerShell_
 
     <div align="left">
 
-    <figure><img src="broken-reference" alt="" width="330"><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/Untitled 1.png" alt=""><figcaption></figcaption></figure>
 
     </div>
 *   After a couple of seconds \

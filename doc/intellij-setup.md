@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 0️⃣ IntelliJ - First Time Setup
+# 0️⃣ 0️⃣ IntelliJ - First Time Setup
 
 Run IntelliJ IDEA and open your first _Scripts_ project
 
@@ -32,16 +32,15 @@ IntelliJ IDEA will probably complain about not yet knowing the global libraries 
 
 <summary>Configure the ATOMSphere JDK</summary>
 
-*   Open the Module settings or press F4 \
-    **Platform Settings** → **SDKs** → **+** → **Add JDK …**\
+*   Open the Module settings or press F4\
+    **Platform Settings** → **SDKs** → **+** → **Add JDK …**\\
 
     <figure><img src=".gitbook/assets/Untitled 2.png" alt="" width="491"><figcaption></figcaption></figure>
 
 <!---->
 
 *   then add `C:\Program Files\Boomi AtomSphere\LocalAtom\jre`\
-    and name it _`AtomSphere`_\
-
+    and name it _`AtomSphere`_\\
 
     <figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
@@ -51,17 +50,17 @@ IntelliJ IDEA will probably complain about not yet knowing the global libraries 
 
 <summary>Configure Groovy SDK 2.4.13</summary>
 
-![](<.gitbook/assets/Untitled 4.png>)
+<img src=".gitbook/assets/Untitled 4.png" alt="" data-size="original">
 
 Use **Library → Create … → Choose Groovy SDK** location
 
-![](broken-reference)
+<img src="broken-reference" alt="" data-size="original">
 
 Close the dialog → **OK** and stop! A project library can be used only in the current project. However, we want to use the Groovy SDK in all future projects. That's why we want to **configure it as a global library**.
 
-![](<.gitbook/assets/Untitled 6.png>)
+<img src=".gitbook/assets/Untitled 6.png" alt="" data-size="original">
 
-![](<.gitbook/assets/Untitled 7.png>)
+<img src=".gitbook/assets/Untitled 7.png" alt="" data-size="original">
 
 </details>
 
@@ -75,11 +74,11 @@ In your Project Dialog (F4) add a **New Global Library Java** `C:\Program Files\
 
 Add it to all Modules
 
-![](<.gitbook/assets/Untitled 9.png>)
+<img src=".gitbook/assets/Untitled 9.png" alt="" data-size="original">
 
 And, finally, give it a more meaningful name
 
-![](<.gitbook/assets/Untitled 10.png>)
+<img src=".gitbook/assets/Untitled 10.png" alt="" data-size="original">
 
 </details>
 
