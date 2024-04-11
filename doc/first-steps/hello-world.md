@@ -72,7 +72,7 @@ If you look at the Test above, you will see that the Test defines the `inputPara
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image (27).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="563"><figcaption></figcaption></figure>
 
 </div>
 
@@ -84,18 +84,18 @@ Forget about those WARNINGs. You cannot get rid of them. They appear because Gro
 
 You can see all logs and outputs in the debug window. There is also the **Threads & Variables** Windows that you will use if you work with breakpoints to see your variables and data.
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 ## Breakpoint
 
 Set a breakpoint in your script (left-click on the row-number where you want to stop) and **Debug** the Test again. The execution stops on the calculation line. Watch you variables:
 
-<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 Step over the current line - execute the calculation.
 
-<figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 and check your variables
 
-<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>

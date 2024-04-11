@@ -34,30 +34,30 @@ Creating a new project is as simple as **creating a folder and running a PowerSh
 * [Download the **`create-project.ps1`** script from GitHub](https://github.com/MarkusSchmidtPro/Boomi.Groovy.ReferenceProject/blob/main/bin/create-project.ps1) and&#x20;
   * save it into that folder.
 
-<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>GitHub</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>GitHub</p></figcaption></figure>
 
 *   **Right**-click the script file and _Run with PowerShell_
 
     <div align="left">
 
-    <figure><img src="../.gitbook/assets/image (13).png" alt="" width="330"><figcaption></figcaption></figure>
+    <figure><img src="broken-reference" alt="" width="330"><figcaption></figcaption></figure>
 
     </div>
 *   After a couple of seconds \
-    ![](<../.gitbook/assets/image (5).png>)\
+    ![](broken-reference)\
     you should have got a `Scripts` directory, ready for use.\
 
 
     <div align="left">
 
-    <figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt="" width="460"><figcaption><p>Script directory</p></figcaption></figure>
+    <figure><img src="broken-reference" alt="" width="460"><figcaption><p>Script directory</p></figcaption></figure>
 
     </div>
 * Start [IntellJ Community Edition](<Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md>) and open your project
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt="" width="399"><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="399"><figcaption></figcaption></figure>
 
 </div>
 

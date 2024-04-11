@@ -12,11 +12,11 @@ layout:
     visible: true
 ---
 
-# 1⃣ First Steps
+# 1️⃣ First Steps
 
 I assume you have [everything prepared](../), you have started IntellJ and you are ready to run your first srcipt, right? Let's first look a bit around, to see what we see in IntelliJ:
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption><p>IntelliJ Community Edition</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>IntelliJ Community Edition</p></figcaption></figure>
 
 There are three projects
 
@@ -64,7 +64,7 @@ There is no need for you to worry about all these details \
 * Open (double-click) <mark style="color:blue;">**`Test`**</mark>`\src\mapScript\`**`HelloWorld`**<mark style="color:blue;">**`_Test`**</mark>**`.groovy`**\
   You remember: the Test is the host from where you run scripts.
 * Click on the green arrow in the Test and run the script\
-  ![](<../.gitbook/assets/image (6).png>)
+  ![](broken-reference)
 * Open the Map-Script: **`MyScript/src/`**<mark style="color:green;">**`mapScript`**</mark>`/msgHelloWorld.groovy`
 
 {% hint style="info" %}
@@ -76,21 +76,21 @@ where `psg` is **P**rocess **S**cript **G**roovy.&#x20;
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>IntelliJ - Run Results</p></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="563"><figcaption><p>IntelliJ - Run Results</p></figcaption></figure>
 
 </div>
 
 *   Once you are happy with the results, copy & paste the `msgHelloWorld.groovy` scipt file code into AtomSphere and use it.
 
-    <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Script Code copied &#x26; pasted</p></figcaption></figure>
+    <figure><img src="broken-reference" alt=""><figcaption><p>Script Code copied &#x26; pasted</p></figcaption></figure>
 * The Scipt in Action
 
 <div align="center">
 
-<figure><img src="../.gitbook/assets/image (9).png" alt="" width="563"><figcaption><p>The Script in a MAP with fix input parameters: a=8, b=6</p></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="563"><figcaption><p>The Script in a MAP with fix input parameters: a=8, b=6</p></figcaption></figure>
 
 </div>
 
 * Check the logs after execution
 
-<figure><img src="../.gitbook/assets/image (10).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="563"><figcaption></figcaption></figure>

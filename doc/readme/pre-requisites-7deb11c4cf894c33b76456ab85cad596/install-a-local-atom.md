@@ -18,13 +18,13 @@ layout:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/PreReq01.png" alt="" width="563"><figcaption><p>Boomi Integration: Manage -> Environments</p></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="563"><figcaption><p>Boomi Integration: Manage -> Environments</p></figcaption></figure>
 
 </div>
 
 Do not forget to **copy your installation token**
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>You will need the installation token later</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>You will need the installation token later</p></figcaption></figure>
 
 Chose a good installation path:
 

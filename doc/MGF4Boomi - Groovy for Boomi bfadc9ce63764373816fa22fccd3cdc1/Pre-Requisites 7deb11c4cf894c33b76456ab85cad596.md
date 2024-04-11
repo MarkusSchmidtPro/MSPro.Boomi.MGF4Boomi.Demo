@@ -1,6 +1,6 @@
 ---
 description: One time preparation of your development computer
-cover: ../.gitbook/assets/nasa_space_shuttle_columbia.jpg
+cover: broken-reference
 coverY: 0
 ---
 

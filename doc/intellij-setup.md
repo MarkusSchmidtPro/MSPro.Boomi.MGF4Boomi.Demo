@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 0⃣ IntelliJ - First Time Setup
+# 0️⃣ IntelliJ - First Time Setup
 
 Run IntelliJ IDEA and open your first _Scripts_ project
 
@@ -52,7 +52,7 @@ IntelliJ IDEA will probably complain about not yet knowing the global libraries 
     and name it _`AtomSphere`_\
 
 
-    <figure><img src=".gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 </details>
 
@@ -64,7 +64,7 @@ IntelliJ IDEA will probably complain about not yet knowing the global libraries 
 
 Use **Library → Create … → Choose Groovy SDK** location
 
-![](<.gitbook/assets/Untitled 5 (2).png>)
+![](broken-reference)
 
 Close the dialog → **OK** and stop! A project library can be used only in the current project. However, we want to use the Groovy SDK in all future projects. That's why we want to **configure it as a global library**.
 
@@ -92,6 +92,6 @@ And, finally, give it a more meaningful name
 
 </details>
 
-<figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 You are ready to go with IntelliJ and you can start debugging the _HelloWorldTest_ script -> [first-steps](first-steps/ "mention")

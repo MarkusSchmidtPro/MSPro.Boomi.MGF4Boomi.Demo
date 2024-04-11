@@ -1,6 +1,6 @@
 ---
 description: Develop, debug and test Groovy scripts for Boomi Integration.
-cover: .gitbook/assets/image (1).png
+cover: broken-reference
 coverY: -48.42809364548495
 layout:
   cover:
@@ -36,7 +36,7 @@ MGF4Boomi brings the following advantages (without any disadvantage):
 
 *
 
-    <figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption><p>Develop Scipts with IntelliJ</p></figcaption></figure>
+    <figure><img src="broken-reference" alt=""><figcaption><p>Develop Scipts with IntelliJ</p></figcaption></figure>
 * Develop Scipts in a full-features IDE (IntelliJ)
   * with syntax highlightning
   * code completion
