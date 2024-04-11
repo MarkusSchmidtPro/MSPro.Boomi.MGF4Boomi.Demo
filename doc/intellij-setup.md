@@ -16,11 +16,7 @@ layout:
 
 Run IntelliJ IDEA and open your first _Scripts_ project
 
-<div align="left">
-
 <figure><img src=".gitbook/assets/Untitled.png" alt=""><figcaption></figcaption></figure>
-
-</div>
 
 IntelliJ IDEA will probably complain about not yet knowing the global libraries and SDKs.
 
@@ -39,12 +35,7 @@ IntelliJ IDEA will probably complain about not yet knowing the global libraries 
 *   Open the Module settings or press F4 \
     **Platform Settings** → **SDKs** → **+** → **Add JDK …**\
 
-
-    <div align="left">
-
     <figure><img src=".gitbook/assets/Untitled 2.png" alt="" width="491"><figcaption></figcaption></figure>
-
-    </div>
 
 <!---->
 

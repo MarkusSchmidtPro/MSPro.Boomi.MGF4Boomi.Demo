@@ -57,7 +57,6 @@ class MyFirstScript_Tests {
     final String SCRIPT_REL_DIR = 'helloWorld'
     final ProcessScript _testScript 
       = new ProcessScript("/MyFirstScript.groovy", SCRIPT_REL_DIR)
-    
 ```
 
 ### Create a new process script
