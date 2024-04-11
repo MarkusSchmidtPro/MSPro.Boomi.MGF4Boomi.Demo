@@ -28,7 +28,7 @@ class Utils_Tests {
         ec.dynamicProcessProperties.DPP_PathTemplate = "{DPP_Path}"
         ec.dynamicProcessProperties.DPP_QueryTemplate = "value={DDP_V}"
         
-        ec.dynamicProcessProperties.DPP_Path = "/root/contracts/"
+        ec.dynamicProcessProperties.DPP_Path = "/root/contracts/get('abc def')"
         DataContext dc = _testScript.run(DataContext.create([
                 Document.fromText("Document A",  [ DDP_V: "Markus Schmidt"] ),
                 Document.fromText("Document B", [ DDP_V: "A & b"]) 

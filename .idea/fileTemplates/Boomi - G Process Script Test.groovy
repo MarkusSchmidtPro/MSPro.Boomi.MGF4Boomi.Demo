@@ -3,22 +3,20 @@ package ProcessScript
 
 import com.boomi.document.scripting.DataContext
 import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
 import groovy.transform.TypeChecked
-import msPro.mgf4boomi.DataContextHelper
 import msPro.mgf4boomi.Document
-import msPro.mgf4boomi.ExecutionUtilContexts
+import msPro.mgf4boomi.ExecutionContexts
 import msPro.mgf4boomi.ProcessScript
 import org.junit.Test
 
-/**
- * TEST serialization of a DataContext object.
- */
 @TypeChecked
-class ${ScriptName}Test {
+class ${SCRIPT_NAME}_Tests {
 
-    final ProcessScript _testScript = new ProcessScript('${ScriptName}.groovy')
-    final String TESTDATA_DIR = 'TestData/JSONSamples/'
-
+    final String SCRIPT_REL_DIR = '${SCRIPT_REL_DIR}'
+    
+    final String userDefinedPropertyBase = 'document.dynamic.userdefined.'
+    final ProcessScript _testScript = new ProcessScript("/${SCRIPT_NAME}.groovy",SCRIPT_REL_DIR)
 
     /**
      * Test 
@@ -26,32 +24,51 @@ class ${ScriptName}Test {
     @Test
     void test01() {
         //
-        // Create and init [DPP_JsonArrayName]
+        // Define Dynamic Process Properties for testing
         //
-        def ec = new ExecutionUtilContexts()
-        // ec.initAddDynamicProcessProperty('DPP_JsonArrayName', '(root)')
+        ExecutionContexts ec = new ExecutionContexts()
+        ec.dynamicProcessProperties.DPP_ProcProp = "My Process Property"
 
         //
-        // DataContext with a single document
+        // Create test documents and its dynamic document properties
         //
-        DataContext inDataContext = DataContext.withDocuments(
-                [
-                        Document.fromFile(TESTDATA_DIR + "${TestDataFileName}")
-                ]
-        )
+        
+        // Replace with your set-up
+        def dc = _testScript.run(
+                DataContext.create(
+                        [
+                                // Create a JSON document in-line from text, 
+                                // Set Dynamic Document Property DDP_V
+                                Document.fromText('''
+                                { 
+                                    "contact_name" : "Markus Schmidt"
+                                }
+                                ''',  [ DDP_NewName: "Lieschen Mueller"] ),
 
-        DataContextHelper dch = _testScript.run(ec, inDataContext)
+                                // Load document from a file
+                                // Document.fromFile(SCRIPT_REL_DIR + "${TestDataFileName}"),
+                        ]
+                ), ec)
 
         //
         // Check and print test result for each document
         //
-        println("Documents after script execution")
-        // assert dch.outDocumentCount==4
+        println("${dc.dataCount} Documents after script execution")
+        assert dc.dataCount==1
 
-        for (int docNo = 0; docNo < dch.outDocumentCount; docNo++) {
-            //Properties docProperties = dataContext.getProperties(docNo);
-            String docText = dch.getOutDocumentText(docNo)
-            println('Doc[' + docNo + ']:' + JsonOutput.prettyPrint(docText))
+        final JsonSlurper js = new JsonSlurper()
+
+        for (int docNo=0; docNo<dc.dataCount; docNo++) {
+            Document doc = dc.Documents[ docNo]
+            String docText = doc.toString()
+            assert docText != "", "Document is null"
+            Map jDoc = js.parseText(docText) as Map
+            
+            // Print document and document properties
+            println("Doc[" + docNo + "]: " + JsonOutput.prettyPrint(doc.toString()))
+            for( def p in doc._dynamicDocumentProperties) { println( "${p.key}='${p.value}'") }
+
+            assert jDoc.contact_Name == doc._dynamicDocumentProperties.DDP_NewName
         }
     }
 }

@@ -7,26 +7,33 @@ import com.boomi.execution.ExecutionUtil
 final String SCRIPT_NAME = "psgUrlBuilder"
 
 /**
- * Takes the [DDP_UrlTemplate] and replaces all {Dxx_} tags with the url 
- * encoded values of a dynamic document or process property.  
+ * Takes the [DPP_PathTemplate] and replaces all placeholder tags {xxx} 
+ * with the properly url encoded values of a dynamic document or process property.  
  *
  * Parameters: 
  *  IN: DPP_PathTemplate   (dynamic PROCESS property)
  *      DPP_QueryTemplate  (dynamic PROCESS property)
- *          Path and query templates containing {Dxx} tags.
- *          The values for the Query template are URL encoded.
- *          [DPP_...] tags are looked up in dynamic process properties.
- *          All other tags are considered to be dynamic document properties.
- *          If Query template does not start with ? the char is added.
+ *          Path and query templates contain {cxx} placeholder tags.
  *
- *      DPP_ValueProperty   [optional] Default: DDP_Url
+ *      DPP_ValuePropertyName   [optional] Default: DDP_Url
  *          The name of the dynamic document property that gets the value
  *          of the the replacement.
- *  ...
+ *  
+ *  The values for the query template are URL encoded (URLEncoder.encode()),
+ *  while the path encoding - which is neccessary for SharePoint Urls - is 
+ *  hand-crafted (_myPathEncoder()) because it requires a different encoding 
+ *  and I haven't found a standard encoder.
+ *  
+ *  [DPP_...] tags are looked up in dynamic process properties.
+ *  All other tags are considered to be dynamic document properties.
+ *  If Query template does not start with ? the char is added.
  *
  * Returns: 
- *  DDP_Value
+ *  The url path in [DDP_Url] - or in a user-defined (DPP_ValuePropertyName) property.
  * ------------------------------------------------------------------------
+ * 2024-04-11      msc -   Comments adjusted
+ * 2024-04-09      msc -   Fixed description
+ * 2024-03-27      msc -   Path encoding added
  * 2024-03-22      msc -   Created
  */
 final String userDefinedPropertyBase = 'document.dynamic.userdefined.'
@@ -53,7 +60,7 @@ try {
 
     if( pathTemplate.startsWith('/'))
         _logger.warning("The path template ${DPP_Name_PathTemplate} sould not start with /, because this may lead to 404!")
-    
+
 //    List<String> tags = template.findAll("\\{(.*?)\\}")
 //    List<String> tags = 
 
@@ -62,13 +69,21 @@ try {
         InputStream documentStream = dataContext.getStream(docNo)
 
         // ------------------------------------------------------------------------
-        
+        // This URLEncoder.encode method converts the string 
+        // into application/x-www-form-urlencoded format.
+        // Which can be used for query parameters, only. 
+        // Not suitable for path encoding
+        // --------------------------------------------------------
+
         String path = pathTemplate
         List<String> tags = path.findAll( "\\{(.*?)\\}")
         for( String tag in tags){
-            path = path.replace( tag, _getValue(  docProperties, tag))
+            path = path.replace( tag,
+                    _myPathEncoder( _getValue(  docProperties, tag)))
         }
+        // org.apache.commons.httpclient.util.URIUtil.encodePath
         _logger.fine( "Path='${path}'" )
+
 
         String query = queryTemplate
         tags = query.findAll( "\\{(.*?)\\}")
@@ -85,6 +100,7 @@ try {
         }
 
         String result = path + query
+
         _logger.fine( "${valuePropertyName}='${result}'" )
         docProperties.setProperty( userDefinedPropertyBase + valuePropertyName, result)
 
@@ -136,4 +152,11 @@ private static String _getValue( Properties docProperties, String tag) {
     return propertyName.startsWith("DPP_")
             ? _getDPP(propertyName, null)
             : _getDDP(docProperties, propertyName, null)
+}
+
+/** The is no out-of-the-box ecoder for a path of an Url.
+ *  This is the handcrafted version.
+ */
+String _myPathEncoder(String path) {
+    return path.replace( ' ', "%20")
 }
