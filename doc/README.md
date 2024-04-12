@@ -1,5 +1,5 @@
 ---
-description: Develop, debug and test Groovy scripts for Boomi Integration.
+description: Develop, debug and test Groovy scripts for Boomi Integration
 cover: .gitbook/assets/photo-1482062364825-616fd23b8fc1.jpeg
 coverY: 0
 layout:
@@ -13,53 +13,25 @@ layout:
   tableOfContents:
     visible: true
   outline:
-    visible: true
+    visible: false
   pagination:
-    visible: true
+    visible: false
 ---
 
-# 📋 Groovy for Boomi
+# 📋 Markus' Groovy Boomi
 
-Everyone who has ever developed a Script for Boomi Integration knows how painful  and error-prone this process is.&#x20;
+Everyone who has ever developed a Script for Boomi Integration knows how painful and error-prone this process is. Not only during development, also later when it comes to changes you must ensure the script's behaviour hasn't changed so that all processes that rely on that script continue working as they did before.
 
-{% hint style="success" %}
-**MGF4Boomi → M**arkus’ **G**roovy **F**ramework **for** **Boomi**
+_Markus' Groovy Boomi_ allows you to develop, debug and unit-test process and map scripts on your local machine, before you copy and paste the well-tested scripts into the Boomi platform.&#x20;
 
-_MGF4Boomi_ is a small framework that enables you to develop, debug and test Groovy Scripts on your local machine, to finally copy and paste them into the platform.
-{% endhint %}
+[get-started.md](readme/get-started.md "mention")
 
-[**Get it from here!**](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md>)
+### About the Autor
 
-## Benefits
+Markus Schmidt (aka MSPro, aka @MarkusSchmidt.PRO) is Boomi Professional Consultant in EMEA region since 2020. He is serving different customers to support them with all their Boomi requirements.&#x20;
 
-MGF4Boomi brings the following advantages (without any disadvantage):
-
-*
-
-    <figure><img src="broken-reference" alt=""><figcaption><p>Develop Scipts with IntelliJ</p></figcaption></figure>
-* Develop Scipts in a full-features IDE (IntelliJ)
-  * with syntax highlightning
-  * code completion
-  * error checking etc.
-* Full support for&#x20;
-  * Documents&#x20;
-  * Dynamic Document Properties
-  * Process and&#x20;
-  * Dynamic Process Properties
-  * Logging
-* Debug your scripts
-  * set breakpoints
-  * go single-step
-  * debug variables
-* Log your message to the console
-* Write Unit Test
-  * to ensure your scripts still provide the same expected results
-  * in all scenarios
-
-### Disadvantages?
-
-The learning curve! But wait, if you want to do fancy scripting there isno way to avoid that!
+He has developed _Markus' Groovy Framework_ (and MGF4Boomi) in his spare time, and he is using it extensivly when developing scripts for customer projects.
 
 ***
 
-Markus Schmidt, 2020 .. Dec-2023
+Markus Schmidt, Munich (Germany), markus(at)markusschmidt.pro
