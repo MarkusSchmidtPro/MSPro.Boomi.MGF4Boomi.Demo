@@ -1,5 +1,10 @@
 ---
+cover: ../.gitbook/assets/positivity-message-cartoon-illustrations-concept.jpg
+coverY: 0
 layout:
+  cover:
+    visible: true
+    size: full
   title:
     visible: true
   description:
