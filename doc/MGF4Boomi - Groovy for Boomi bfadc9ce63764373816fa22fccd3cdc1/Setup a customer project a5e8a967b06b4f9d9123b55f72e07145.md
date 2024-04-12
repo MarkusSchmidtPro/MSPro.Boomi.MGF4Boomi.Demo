@@ -14,45 +14,28 @@ layout:
 
 # 🧙‍♂️ Create a new Project
 
-{% hint style="danger" %}
-<mark style="color:red;">**DO NOT create your project on a Google Drive Synced folder.**</mark>
-
-<mark style="color:blue;">G-Drive folders are not appropriate for development purposes because G-Drive keeps locks on files and folders which will lead to unpredictable results.</mark>
-{% endhint %}
+Creating a new project is as simple as **creating a folder and running a PowerShell script**.
 
 {% hint style="info" %}
-To get started, you simply **create a new project** as described below.
-
 If this is your first time setup you must read the [Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md](<Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md> "mention") before, \
 for example, to install your IDE.
 {% endhint %}
 
-Creating a new project is as simple as **creating a folder and running a PowerShell script**.
+{% hint style="danger" %}
+<mark style="color:red;">**DO NOT create your project on a Google Drive synced folder.**</mark>
+
+<mark style="color:blue;">G-Drive folders are not appropriate for development purposes because G-Drive keeps locks on files and folders which will lead to unpredictable results.</mark>
+{% endhint %}
 
 * Use any folder for your _scripts_ project,\
   for example:  `Boomi.Spaces\MSPro\`
 * [Download the **`create-project.ps1`** script from GitHub](https://github.com/MarkusSchmidtPro/Boomi.Groovy.ReferenceProject/blob/main/bin/create-project.ps1) and&#x20;
   * save it into that folder.
-
-<figure><img src="../.gitbook/assets/Untitled.png" alt=""><figcaption><p>GitHub</p></figcaption></figure>
-
-*   **Right**-click the script file and _Run with PowerShell_
-
-    <div align="left">
-
-    <figure><img src="../.gitbook/assets/Untitled 1.png" alt=""><figcaption></figcaption></figure>
-
-    </div>
-*   After a couple of seconds \
-    ![](broken-reference)\
-    you should have got a `Scripts` directory, ready for use.\
-
-
-    <div align="left">
-
-    <figure><img src="broken-reference" alt="" width="460"><figcaption><p>Script directory</p></figcaption></figure>
-
-    </div>
+* **Right**-click the script file and _Run with PowerShell_![](../.gitbook/assets/runWithPS.png)
+* After a couple of seconds \
+  ![](../.gitbook/assets/psWorking.png)\
+  you should have got a `Scripts` directory, ready for use.\
+  ![](<../.gitbook/assets/scriptDir (1).png>)
 * Start [IntellJ Community Edition](<Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md>) and open your project
 
 <div align="left">
