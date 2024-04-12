@@ -18,21 +18,25 @@ layout:
     visible: false
 ---
 
-# 📋 Markus' Groovy Boomi
+# Markus' Groovy Boomi
 
-Everyone who has ever developed a Script for Boomi Integration knows how painful and error-prone this process is. Not only during development, also later when it comes to changes you must ensure the script's behaviour hasn't changed so that all processes that rely on that script continue working as they did before.
+Everyone who has ever developed a Script for Boomi Integration knows how painful and error-prone this process is. Not only during development, also later when it comes to changes you must ensure the script's behaviour hasn't changed, so that all processes that rely on that script continue working as they did before.
 
-_Markus' Groovy Boomi_ allows you to develop, debug and unit-test process and map scripts on your local machine, before you copy and paste the well-tested scripts into the Boomi platform.&#x20;
+_Markus' Groovy Boomi_ allows you to develop, debug and unit-test process and map scripts on your local machine, before you copy and paste the well-tested scripts into the Boomi platform -> [#benefits](readme/overview.md#benefits "mention")
 
 [get-started.md](readme/get-started.md "mention")
 
+{% hint style="info" %}
+The published content and all developments are the result of [the autor's](./#about-the-autor) free time. All tools used, hosting costs, web services etc. are privately financed and nothing is sponsored by Boomi.
+
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom\_images/orange\_img.png)](https://www.buymeacoffee.com/ptgkosiswg)
+{% endhint %}
+
 ### About the Autor
 
-Markus Schmidt (aka MSPro, aka @MarkusSchmidt.PRO) is Boomi Professional Consultant in EMEA region since 2020. He is serving different customers to support them with all their Boomi requirements.&#x20;
+Markus Schmidt (aka MSPro, aka @MarkusSchmidt.PRO) is Boomi Professional Consultant in EMEA region since 2020. He is serving different customers to support them with all their Boomi requirements.
 
-He has developed _Markus' Groovy Framework_ (and MGF4Boomi) in his spare time, and he is using it extensivly when developing scripts for customer projects.
-
-<a href="https://www.buymeacoffee.com/ptgkosiswg" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+He has developed _Markus Groovy Boomi_ in his spare time, and he is using it extensivly when developing scripts for customer projects in his role as Professional Service Consultant.
 
 ***
 

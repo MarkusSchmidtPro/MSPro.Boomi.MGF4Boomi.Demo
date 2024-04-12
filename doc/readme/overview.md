@@ -1,42 +1,54 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Overview
 
+**Markus's Groovy Boomi** brings the following advantages without any disatvantage. The only 'cost' is to get used to it, which normally takes a bit of time, and it requires your personal commitment to want to work with Groovy Script. If you don't like scripting, yet, you may want to give it a try. Maybe you will love scripting afterwards. I recommend [Groovy-Learn](https://groovy-lang.org/learn.html).
+
+kjshdfkjdsh
 
 
-{% hint style="success" %}
-**MGF4Boomi → M**arkus’ **G**roovy **F**ramework for **B**oomi
-{% endhint %}
 
-## Benefits
+<div align="left">
 
-MGF4Boomi brings the following advantages (without any disadvantage):
+<figure><img src="../.gitbook/assets/image (1).png" alt="Buy me a coffee (mspro, boomi)" width="252"><figcaption><p>Need sponsoring!</p></figcaption></figure>
 
-*
+</div>
 
-    <figure><img src="broken-reference" alt=""><figcaption><p>Develop Scipts with IntelliJ</p></figcaption></figure>
 * Develop Scipts in a full-features IDE (IntelliJ)
   * with syntax highlightning
-  * code completion
-  * error checking etc.
-* Full support for&#x20;
-  * Documents&#x20;
+  * code completion (intelli-sense)
+  * immediate (syntax) error checking etc.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>IntelliJ - Editing with syntaxt highlightning &#x26; code-completion, debugging and unit testing</p></figcaption></figure>
+
+* **Full support** for&#x20;
+  * All types of documents (JSON, XML, Flat-File)
   * Dynamic Document Properties
-  * Process and&#x20;
-  * Dynamic Process Properties
+  * Process and Dynamic Process Properties
   * Logging
-* Debug your scripts
-  * set breakpoints
-  * go single-step
-  * debug variables
-* Log your message to the console
-* Write Unit Test
-  * to ensure your scripts still provide the same expected results
-  * in all scenarios
+* **Debug** your scripts: breakpoints, single-step, debug variables, log messages
+*   Write **Unit Test**
 
-### Disadvantages?
+    * to ensure your scripts still provide the same expected results
+    * in all scenarios
 
-The learning curve! But wait, if you want to do fancy scripting there isno way to avoid that!
+    <div align="left">
 
-***
+    <figure><img src="../.gitbook/assets/image (3).png" alt="" width="272"><figcaption><p>Several unit tests ensure the function of the script at all times</p></figcaption></figure>
 
-Markus Schmidt, 2020 .. Dec-2023[\
+    </div>
+
+[\
 ](https://www.buymeacoffee.com/ptgkosiswg)
