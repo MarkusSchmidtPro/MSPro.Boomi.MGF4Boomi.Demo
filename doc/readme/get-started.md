@@ -1,4 +1,4 @@
-# Getting Started
+# 🚀 Getting Started
 
 Before you can start with your first project you should to check the [pre-requisites](https://www.notion.so/Pre-Requisites-7deb11c4cf894c33b76456ab85cad596?pvs=21).
 

@@ -4,7 +4,7 @@ cover: broken-reference
 coverY: 0
 ---
 
-# Pre-Requisites
+# ☑️ Pre-Requisites
 
 There are a few things you need, before you can start Groovy scripting on your local machine. With other words: your development environment needs to be setup once.
 

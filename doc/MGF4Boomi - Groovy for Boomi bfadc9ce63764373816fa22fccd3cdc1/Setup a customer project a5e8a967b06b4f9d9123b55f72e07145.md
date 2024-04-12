@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# Create a new Project
+# 🧙‍♂️ Create a new Project
 
 {% hint style="danger" %}
 <mark style="color:red;">**DO NOT create your project on a Google Drive Synced folder.**</mark>
