@@ -32,6 +32,10 @@ Markus Schmidt (aka MSPro, aka @MarkusSchmidt.PRO) is Boomi Professional Consult
 
 He has developed _Markus' Groovy Framework_ (and MGF4Boomi) in his spare time, and he is using it extensivly when developing scripts for customer projects.
 
+<div>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="PtGKOSiSWG" data-color="#ff9600" data-emoji="☕"  data-font="Poppins" data-text="Buy me a coffee (or beer)" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
+</div>
+
 ***
 
 Markus Schmidt, Munich (Germany), markus(at)markusschmidt.pro
