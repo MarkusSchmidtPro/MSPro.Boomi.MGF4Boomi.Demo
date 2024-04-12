@@ -29,7 +29,8 @@ _Markus' Groovy Boomi_ allows you to develop, debug and unit-test process and ma
 {% hint style="info" %}
 The published content and all developments are the result of [the autor's](./#about-the-autor) free time. All tools used, hosting costs, web services etc. are privately financed and nothing is sponsored by Boomi.
 
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom\_images/orange\_img.png)](https://www.buymeacoffee.com/ptgkosiswg)
+[![Need sponsoring!](.gitbook/assets/buyMeACoffee.png)](https://www.buymeacoffee.com/mspro)
+
 {% endhint %}
 
 ### About the Autor

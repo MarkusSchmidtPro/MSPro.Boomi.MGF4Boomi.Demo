@@ -16,15 +16,7 @@ layout:
 
 **Markus's Groovy Boomi** brings the following advantages without any disatvantage. The only 'cost' is to get used to it, which normally takes a bit of time, and it requires your personal commitment to want to work with Groovy Script. If you don't like scripting, yet, you may want to give it a try. Maybe you will love scripting afterwards. I recommend [Groovy-Learn](https://groovy-lang.org/learn.html).
 
-kjshdfkjdsh
-
-
-
-<div align="left">
-
-<figure><img src="../.gitbook/assets/image (1).png" alt="Buy me a coffee (mspro, boomi)" width="252"><figcaption><p>Need sponsoring!</p></figcaption></figure>
-
-</div>
+[![Need sponsoring!](../.gitbook/assets/buyMeACoffee.png)](https://www.buymeacoffee.com/mspro)
 
 * Develop Scipts in a full-features IDE (IntelliJ)
   * with syntax highlightning
@@ -50,5 +42,6 @@ kjshdfkjdsh
 
     </div>
 
-[\
+[
+\
 ](https://www.buymeacoffee.com/ptgkosiswg)
