@@ -22,7 +22,7 @@ layout:
 
 Everyone who has ever developed a Script for Boomi Integration knows how painful and error-prone this process is. Not only during development, also later when it comes to changes you must ensure the script's behaviour hasn't changed, so that all processes that rely on that script continue working as they did before.
 
-_Markus' Groovy Boomi_ allows you to develop, debug and unit-test process and map scripts on your local machine, before you copy and paste the well-tested scripts into the Boomi platform -> [#benefits](readme/overview.md#benefits "mention")
+_Markus' Groovy Boomi_ allows you to develop, debug and unit-test process and map scripts on your local machine, before you copy and paste the well-tested scripts into the Boomi platform -> [#benefits](readme/overview.md)
 
 [get-started.md](readme/get-started.md "mention")
 
