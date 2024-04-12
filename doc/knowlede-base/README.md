@@ -1,12 +1,11 @@
 ---
-description: A collection of other topics
 layout:
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
-    visible: true
+    visible: false
   outline:
     visible: false
   pagination:
@@ -15,3 +14,4 @@ layout:
 
 # 💤 Appendix
 
+A collection of topics

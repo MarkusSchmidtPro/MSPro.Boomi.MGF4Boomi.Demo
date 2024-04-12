@@ -39,15 +39,15 @@ Right now, there are templates for process scripts are available, only.
 
 Right click on any script folder where you want to create a new test class and select _Boomi - G Process Script **Test**_.
 
-<figure><img src="../.gitbook/assets/image%20(5).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image%20(5).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Fill out the neccessary information for your new test script.
 
-<figure><img src="../.gitbook/assets/image%20(2)%20(1).png" alt="" width="516"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image%20(2)%20(1).png" alt="" width="516"><figcaption></figcaption></figure>
 
 click OK and your blank test script is there.
 
-<figure><img src="../.gitbook/assets/image%20(3)%20(1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image%20(3)%20(1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 If you look at the creates test class you can see there are predefined variables which are used to reference the process script - which will be created in a second.
 
@@ -63,21 +63,21 @@ class MyFirstScript_Tests {
 
 Right click on the folder where you created the test class and create a new process script by selecting _Boomi - G Process Script_. Fill out the neccessary information:
 
-<figure><img src="../.gitbook/assets/image (4).png" alt="" width="539"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="539"><figcaption></figcaption></figure>
 
 Et voilà, you're done:
 
-<figure><img src="../.gitbook/assets/image%20(1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image%20(1).png" alt=""><figcaption></figcaption></figure>
 
 #### Run your test
 
 You can _run_ the test without debugging (breakpoints won't be hit) or you use the debugger:
 
-<figure><img src="../.gitbook/assets/image%20(3).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image%20(3).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Check the output window to see the **test passed**
 
-<figure><img src="../.gitbook/assets/image%20(4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image%20(4).png" alt=""><figcaption></figcaption></figure>
 
 The output messages were printed by the test class (have a look into it). You are ready to implement and debug your process script. Navigate to the process script and replace the sample functionality
 
@@ -95,4 +95,4 @@ The output messages were printed by the test class (have a look into it). You ar
 
 Select **Scheme : Project**
 
-<figure><img src="../.gitbook/assets/IntelliJTemplate.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/IntelliJTemplate.png" alt=""><figcaption></figcaption></figure>

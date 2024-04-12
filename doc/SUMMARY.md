@@ -1,7 +1,7 @@
 # Table of contents
 
-* [Markus' Groovy Boomi](README.md)
-  * [Overview](readme/overview.md)
+* [🏠 Markus' Groovy Boomi](README.md)
+  * [🕯️ Overview](readme/overview.md)
   * [Getting Started](readme/get-started.md)
   * [Create a new Project](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md>)
   * [Pre-Requisites](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md>)
@@ -9,7 +9,7 @@
     * [Groovy Script SDK](readme/pre-requisites-7deb11c4cf894c33b76456ab85cad596/groovy-script-sdk.md)
 * [0️⃣ IntelliJ - First Time Setup](intellij-setup.md)
 * [1️⃣ First Steps](first-steps/README.md)
-  * [Hello World](first-steps/hello-world.md)
+  * [Hello World](first-steps/hello-world/README.md)
+    * [IntelliJ Templates](first-steps/hello-world/intellij-templates.md)
 * [💤 Appendix](knowlede-base/README.md)
   * [Local disk folder structure](knowlede-base/local-disk-folder-structure-d010906aac0344bab591f7bebd243856.md)
-  * [IntelliJ Templates](knowlede-base/intellij-templates.md)
