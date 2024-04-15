@@ -18,7 +18,7 @@ layout:
     visible: false
 ---
 
-# 🏠 Markus' Groovy for Boomi
+# Markus' Groovy for Boomi
 
 Everyone who has ever developed a Script for Boomi Integration knows how painful and error-prone this process is. Not only during development, also later when it comes to changes you must ensure the script's behaviour hasn't changed, so that all processes that rely on that script continue working as they did before.
 
