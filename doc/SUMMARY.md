@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🏠 Markus' Groovy Boomi](README.md)
+* [🏠 Markus' Groovy for Boomi](README.md)
   * [🕯️ Overview](readme/overview.md)
   * [🚀 Getting Started](readme/get-started.md)
   * [🧙‍♂️ Create a new Project](<MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md>)
