@@ -32,12 +32,4 @@ The published content and all developments are the result of [the autor's](./#ab
 [![](.gitbook/assets/buyMeACoffee.png)](https://www.buymeacoffee.com/mspro)
 {% endhint %}
 
-### About the Autor
-
-Markus Schmidt (aka MSPro, aka @MarkusSchmidt.PRO) is Boomi Professional Consultant in EMEA region since 2020. He is serving different customers to support them with all their Boomi requirements.
-
-He has developed _Markus Groovy Boomi_ in his spare time, and he is using it extensivly when developing scripts for customer projects in his role as Professional Service Consultant.
-
-***
-
-Markus Schmidt, Munich (Germany), markus(at)markusschmidt.pro
+[About](https://app.gitbook.com/s/LCAyl5ElDT5mJ2x6oC3k/#about "mention")
