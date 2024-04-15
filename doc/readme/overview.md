@@ -9,14 +9,19 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: false
+    visible: true
 ---
 
 # 🕯️ Overview
 
-**Markus's Groovy Boomi** brings the following advantages without any disatvantage. The only 'cost' is to get used to it, which normally takes a bit of time, and it requires your personal commitment to want to work with Groovy Script. If you don't like scripting, yet, you may want to give it a try. Maybe you will love scripting afterwards. I recommend [Groovy-Learn](https://groovy-lang.org/learn.html).
+**Markus's Groovy Boomi** brings the following advantages without any disatvantage. The only _cost_ is to get used to it, which normally takes a bit of time, and it **requires your personal commitment to want to work with Groovy Script**. If you don't like scripting, yet, you may want to give it a try. Maybe you will love scripting afterwards. I recommend [Groovy-Learn](https://groovy-lang.org/learn.html).
 
+{% hint style="info" %}
+The published content and all developments are the result of [the autor's](https://mspro.gitbook.io/the-mspro-boomi-collection/v/markus-groovy-framework-for-boomi#about-the-autor) free time. All tools used, hosting costs, web services etc. are privately financed and nothing is sponsored by Boomi.\
 [<img src="../.gitbook/assets/buyMeACoffee.png" alt="Need a sponsor - mspro, boomi" data-size="original">](https://www.buymeacoffee.com/mspro)
+{% endhint %}
+
+### Features
 
 * Develop Scipts in a **full-featured IDE** (IntelliJ)
   * with syntax highlightning
@@ -41,6 +46,3 @@ layout:
     <figure><img src="../.gitbook/assets/image (3).png" alt="" width="272"><figcaption><p>Several unit tests ensure the function of the script at all times</p></figcaption></figure>
 
     </div>
-
-[\
-](https://www.buymeacoffee.com/ptgkosiswg)
