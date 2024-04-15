@@ -35,12 +35,20 @@ G-Drive folders are not appropriate for development purposes because G-Drive kee
   * save it into you project folder.
 * **Right**-**click** the script file and select _**Run with PowerShell**_
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<div align="left">
+
+<figure><img src=".gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
+
+</div>
 
 * After a couple of seconds \
   ![](.gitbook/assets/psWorking.png)\
   you should have got a `Scripts` directory, ready for use.
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>Empty project directory with .idea folder</p></figcaption></figure>
+<div align="left">
+
+<figure><img src=".gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>Empty project directory with .idea folder</p></figcaption></figure>
+
+</div>
 
 [using-groovy-for-boomi](using-groovy-for-boomi/ "mention")
