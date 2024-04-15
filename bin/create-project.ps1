@@ -6,6 +6,7 @@
 #   2. Update the local MGF4Boomi sources with the latest source from GitHub
 #   3. Create a <ProjectName>.code.workspace, in case you want to use Git with VS-Code
 # ----------------------------------------------------------------------------------------------------
+#   2024-04-15  msc -   Remove all .git* items
 #   2024-01-31  msc -   $ProgressPreference = 'SilentlyContinue'
 #   2022-05-04  msc -   Created
 # ====================================================================================================
@@ -48,6 +49,7 @@ function Get-SampleProject {
     Rename-Item     -Path ".\$scriptFolder\$GitHubProject.code-workspace" -NewName "$projectName.code-workspace"
 
     Set-Location $scriptFolder
+    get-childitem -Include .git*  -Recurse -force | Remove-Item -Force -Recurse
 }
 
 function Update-Framework {
