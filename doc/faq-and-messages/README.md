@@ -2,5 +2,5 @@
 description: A collection of question, messages, errors
 ---
 
-# FAQ and Messages
+# ⁉️ FAQ and Messages
 

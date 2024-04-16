@@ -12,9 +12,9 @@ layout:
     visible: true
 ---
 
-# 1️⃣ First Steps
+# \_First Steps
 
-I assume you have [everything prepared](../), you have started IntellJ and you are ready to run your first srcipt, right? Let's first look a bit around, to see what we see in IntelliJ:
+I assume you have [everything prepared](../../), you have started IntellJ and you are ready to run your first srcipt, right? Let's first look a bit around, to see what we see in IntelliJ:
 
 <figure><img src="broken-reference" alt=""><figcaption><p>IntelliJ Community Edition</p></figcaption></figure>
 

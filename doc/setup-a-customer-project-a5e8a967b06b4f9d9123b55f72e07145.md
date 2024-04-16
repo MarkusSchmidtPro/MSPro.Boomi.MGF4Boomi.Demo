@@ -47,7 +47,7 @@ G-Drive folders are not appropriate for development purposes because G-Drive kee
 
 <div align="left">
 
-<figure><img src=".gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption><p>Empty project directory with .idea folder</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1) (1).png" alt="" width="563"><figcaption><p>Empty project directory with .idea folder</p></figcaption></figure>
 
 </div>
 
