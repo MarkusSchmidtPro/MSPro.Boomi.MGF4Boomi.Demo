@@ -18,6 +18,6 @@ Start IntellJ IDEA and open your project
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption><p>Open the Script directory (with .idea) in IntelliJ</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt="" width="563"><figcaption><p>Open the Script directory (with .idea) in IntelliJ</p></figcaption></figure>
 
 </div>

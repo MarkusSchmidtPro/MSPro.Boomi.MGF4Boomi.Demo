@@ -21,7 +21,7 @@ layout:
   * code completion (intelli-sense)
   * immediate (syntax) error checking etc.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>IntelliJ - Editing with syntaxt highlightning &#x26; code-completion, debugging and unit testing</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>IntelliJ - Editing with syntaxt highlightning &#x26; code-completion, debugging and unit testing</p></figcaption></figure>
 
 * **Full support** for
   * All types of documents (JSON, XML, Flat-File)
