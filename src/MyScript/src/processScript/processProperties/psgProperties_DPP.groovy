@@ -1,4 +1,5 @@
 package processScript.processProperties
+
 /// *************** COPY AND PASTE FROM HERE *****************
 
 import com.boomi.execution.ExecutionUtil
@@ -31,7 +32,7 @@ try {
     // Access a not defined Property and write a WARNING
     final String propName2 = "unknown"
     def propUnknown = ExecutionUtil.getDynamicProcessProperty(propName2)
-    if( propUnknown == null) _logger.warning("Unknown Dynamic Process Property: $propName2")
+    if( propUnknown == null) _logger.warning("Expected WARN: Unknown Dynamic Process Property: $propName2")
 
     // You can also set a DynamicProcessProperty
     // And check (assert) in your Test routine if it is set correctly.

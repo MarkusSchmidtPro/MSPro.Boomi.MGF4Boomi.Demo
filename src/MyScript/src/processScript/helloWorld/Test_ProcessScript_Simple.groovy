@@ -1,6 +1,7 @@
 package processScript.helloWorld
 
 import com.boomi.document.scripting.DataContext
+import groovy.transform.SourceURI
 import msPro.mgf4boomi.tests.TestHelper
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.Document
@@ -11,9 +12,11 @@ import org.junit.Test
  * Demo MGF4Boomi functionality.
  */
 @TypeChecked
-class ProcessScript_Simple_Test {
+class Test_ProcessScript_Simple {
 
-    final ProcessScript _testScript = new ProcessScript("psgTrace.groovy", "helloWorld")
+    @SourceURI
+    URI _sourceUri
+    final ProcessScript _processScript = new ProcessScript("psgTrace.groovy", _sourceUri)
 
 
     /**
@@ -21,7 +24,7 @@ class ProcessScript_Simple_Test {
      */
     @Test
     void test01() {
-        DataContext dc = _testScript.run(DataContext.create())
+        DataContext dc = _processScript.run(DataContext.create())
         TestHelper.printTextDocuments(dc)
     }
 
@@ -31,7 +34,7 @@ class ProcessScript_Simple_Test {
      */
     @Test
     void test02() {
-        DataContext dc = _testScript.run(DataContext.create([
+        DataContext dc = _processScript.run(DataContext.create([
                 Document.fromText("Document A"),
                 Document.fromText("Document B"),
         ]))

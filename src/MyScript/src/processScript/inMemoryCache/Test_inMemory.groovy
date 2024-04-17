@@ -1,6 +1,7 @@
 package processScript.inMemoryCache
 
 import com.boomi.document.scripting.DataContext
+import groovy.transform.SourceURI
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.Document
 import msPro.mgf4boomi.ExecutionContexts
@@ -12,9 +13,11 @@ import org.junit.Test
  * TEST serialization of a DataContext object.
  */
 @TypeChecked
-class KeyValueTest {
+class Test_inMemory {
 
-    //final String TestDataDir  = 'src/ProcessScript/exceptionMessage/TestDocuments/'
+    @SourceURI
+    URI _sourceUri
+
     final String userDefinedPropertyBase = 'document.dynamic.userdefined.'
 
 
@@ -34,7 +37,7 @@ class KeyValueTest {
         //
         // Fill keyValue cache
         //
-        final ProcessScript setScript = new ProcessScript('/psg.MSPro_InMemory_SET.groovy', "InMemoryCache")
+        final ProcessScript setScript = new ProcessScript('/psg.MSPro_InMemory_SET.groovy', _sourceUri)
         setScript.run(DataContext.create([
                 // Create document with response objects
                 Document.fromText( "empty document 1", [ DDP_Key : responseCache.keySet()[0], DDP_Value : responseCache.values()[0] ] ),
@@ -47,7 +50,7 @@ class KeyValueTest {
         //
         String valuePropertyName = "DDP_MyValue"
         ec.dynamicProcessProperties.DPP_ValuePropertyName = valuePropertyName
-        final ProcessScript getScript = new ProcessScript('/psg.MSPro_InMemory_GET.groovy', "InMemoryCache")
+        final ProcessScript getScript = new ProcessScript('/psg.MSPro_InMemory_GET.groovy', _sourceUri)
         def dc = getScript.run(DataContext.create([
                 // Create document with response objects
                 Document.fromText( "empty document 1" , [ DDP_Key : responseCache.keySet()[0] ]),

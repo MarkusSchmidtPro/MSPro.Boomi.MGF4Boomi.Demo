@@ -1,6 +1,7 @@
 package processScript.helloWorld
 
 import com.boomi.document.scripting.DataContext
+import groovy.transform.SourceURI
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.Document
 import msPro.mgf4boomi.ProcessScript
@@ -11,9 +12,12 @@ import org.junit.Test
  * Demo Dynamic Document Properties
  */
 @TypeChecked
-class Properties_DDP_Test {
+class Test_Properties_DDP {
 
-    final ProcessScript _testScript = new ProcessScript("psgTrace.groovy", "helloWorld")
+    @SourceURI
+    URI _sourceUri
+    final ProcessScript _testScript = new ProcessScript("psgTrace.groovy", _sourceUri)
+
 
     /**
      * Run script with two Strings as documents, 

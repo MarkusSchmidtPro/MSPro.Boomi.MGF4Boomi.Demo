@@ -1,6 +1,7 @@
 package processScript.processProperties
 
 import com.boomi.document.scripting.DataContext
+import groovy.transform.SourceURI
 import msPro.mgf4boomi.tests.TestHelper
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.Document
@@ -13,9 +14,11 @@ import org.junit.Test
  * TEST to demo MGF4Boomi functionality.
  */
 @TypeChecked
-class Properties_PP_Test {
+class Test_Properties_PP {
 
-    final ProcessScript _testScript = new ProcessScript("/psgProperties_PP.groovy","processProperties")
+    @SourceURI
+    URI _sourceUri
+    final ProcessScript _processScript = new ProcessScript("psgProperties_PP.groovy", _sourceUri)
 
     // You may put all your Process Property IDs in a separate file so that 
     // you can use and share them in all your tests!
@@ -51,7 +54,7 @@ class Properties_PP_Test {
                 (VAL2_ID)   : "Markus Schmidt"
         ]
 
-        DataContext dc = _testScript.run(DataContext.create([
+        DataContext dc = _processScript.run(DataContext.create([
                 Document.fromText("Document A"),
                 Document.fromText("Document B")
         ]), ec)

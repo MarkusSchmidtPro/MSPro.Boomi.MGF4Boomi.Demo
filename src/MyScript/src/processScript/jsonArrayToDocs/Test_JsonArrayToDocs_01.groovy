@@ -1,6 +1,7 @@
 package processScript.jsonArrayToDocs
 
 import com.boomi.document.scripting.DataContext
+import groovy.transform.SourceURI
 import msPro.mgf4boomi.tests.TestHelper
 import groovy.json.JsonSlurper
 import groovy.transform.TypeChecked
@@ -14,9 +15,12 @@ import org.junit.Test
  *
  */
 @TypeChecked
-class JsonArrayToDocs_Test01 {
+class Test_JsonArrayToDocs_01 {
 
-    final ProcessScript _testScript = new ProcessScript("PSGJsonArrayToDocs.groovy", "jsonArrayToDocs")
+    @SourceURI
+    URI _sourceUri
+    final ProcessScript _processScript = new ProcessScript("psgJsonArrayToDocs.groovy", _sourceUri)
+    
 
     /**
      * Test split single document with some Array items, using "(root)".
@@ -53,7 +57,7 @@ class JsonArrayToDocs_Test01 {
                 Document.fromText(jsonDoc1)
         ])
 
-        _testScript.run(dc)
+        _processScript.run(dc)
         assert dc.Documents.size() == 3, "Three array elements should result in three documents!"
         TestHelper.printJsonDocuments(dc)
     }
@@ -86,7 +90,7 @@ class JsonArrayToDocs_Test01 {
                   ]
                 }""")
         ])
-        _testScript.run(dc, ec)
+        _processScript.run(dc, ec)
         assert dc.Documents.size() == 3, "Three array elements should result in three documents!"
 
         final slurper = new JsonSlurper()

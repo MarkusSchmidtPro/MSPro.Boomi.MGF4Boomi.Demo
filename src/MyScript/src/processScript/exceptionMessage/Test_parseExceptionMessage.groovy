@@ -1,6 +1,7 @@
 package processScript.exceptionMessage
 
 import com.boomi.document.scripting.DataContext
+import groovy.transform.SourceURI
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.Document
 import msPro.mgf4boomi.ExecutionContexts
@@ -12,10 +13,11 @@ import org.junit.Test
  * TEST serialization of a DataContext object.
  */
 @TypeChecked
-class ParseExceptionMessageTest {
+class Test_parseExceptionMessage {
 
-    final ProcessScript _testScript = new ProcessScript('/psgParseExceptionMessage.groovy', "exceptionMessage")
-    //final String TestDataDir  = 'src/ProcessScript/exceptionMessage/TestDocuments/'
+    @SourceURI
+    URI _sourceUri
+    final ProcessScript _testScript = new ProcessScript("psgParseExceptionMessage.groovy", _sourceUri)
     final String userDefinedPropertyBase = 'document.dynamic.userdefined.'
 
 
@@ -56,7 +58,7 @@ class ParseExceptionMessageTest {
     @Test
     void test02() {
         String testExceptionMessage = """
-            can"t parse argument number: subProcessNo; Caused by: For input string: "subProcessNo"
+            Custom Message: can"t parse argument number: subProcessNo; Caused by: For input string: "subProcessNo"
         """.trim()
         
         def dc = _testScript.run(DataContext.create([

@@ -1,4 +1,6 @@
+package mapScript
 
+import groovy.transform.SourceURI
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.MapScript
 import org.junit.Test
@@ -10,10 +12,13 @@ import org.junit.Test
  * For more information on testing see: https://junit.org/junit4/
  */
 @TypeChecked
-class HelloWorld_Test {
+class Test_HelloWorld {
+
+    @SourceURI
+    URI _sourceUri
 
     // Specify the Boomi Script that your want to test in this class.
-    final MapScript _testScript = new MapScript("msgHelloWorld.groovy")
+    final MapScript _testScript = new MapScript("msgHelloWorld.groovy", _sourceUri)
 
     /** Your first Map Script Test. */
     @Test
