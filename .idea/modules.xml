@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MSProScripts/MSProScripts.iml" filepath="$PROJECT_DIR$/MSProScripts/MSProScripts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyScripts/MyScripts.iml" filepath="$PROJECT_DIR$/MyScripts/MyScripts.iml" />
     </modules>
   </component>
 </project>
