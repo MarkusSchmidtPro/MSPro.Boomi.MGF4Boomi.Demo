@@ -1,4 +1,9 @@
-package processScript
+package processScript.utils
+
+/** The default document pass-thourgh script that 
+ *  does nothing.
+ */
+does nothing.
 
 for( int i = 0; i < dataContext.getDataCount(); i++ ) {
     InputStream is = dataContext.getStream(i)

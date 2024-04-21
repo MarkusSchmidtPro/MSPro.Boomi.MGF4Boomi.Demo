@@ -2,16 +2,12 @@ package processScript.utils
 
 import com.boomi.document.scripting.DataContext
 import groovy.json.JsonOutput
-import groovy.json.JsonSlurper
 import groovy.transform.SourceURI
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.Document
 import msPro.mgf4boomi.ExecutionContexts
 import msPro.mgf4boomi.ProcessScript
 import org.junit.Test
-
-import java.nio.file.Path
-import java.nio.file.Paths
 
 @TypeChecked
 class Test_TraceContext {
@@ -43,7 +39,7 @@ class Test_TraceContext {
         println("${dc.dataCount} Documents after script execution")
         assert dc.dataCount == 1
 
-        final JsonSlurper js = new JsonSlurper()
+        //final JsonSlurper js = new JsonSlurper()
 
         for (int docNo = 0; docNo < dc.dataCount; docNo++) {
             Document doc = dc.Documents[docNo]

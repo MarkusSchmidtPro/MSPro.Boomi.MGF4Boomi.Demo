@@ -25,7 +25,6 @@ class Test_UrlBuilder {
      */
     @Test
     void test01() {
-        def f = new File('psgUrlBuilder.groovy')
         ExecutionContexts ec = new ExecutionContexts()
         ec.dynamicProcessProperties.DPP_ValuePropertyName = "DPP_MyValue"
         ec.dynamicProcessProperties.DPP_PathTemplate = "{DPP_Path}"
