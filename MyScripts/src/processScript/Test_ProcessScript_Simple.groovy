@@ -49,7 +49,7 @@ class Test_ProcessScript_Simple {
 		printDocuments(context.outputDocuments)
 	}
 
-	private void printDocuments(Iterable<Document> documents) {
+	private static void printDocuments(Iterable<Document> documents) {
 		int docNo = 0
 		for (Document doc in documents) {
 			println("Doc[${docNo++}]=" + doc.toString())

@@ -1,56 +1,55 @@
-package templatesSource
+package processScript
 
-/// *************** COPY AND PASTE FROM HERE *****************
 import com.boomi.execution.ExecutionUtil
 
-final String SCRIPT_NAME = "${FILE_NAME}"
+
+/// *************** COPY AND PASTE FROM HERE *****************
+
+final String SCRIPT_NAME = "processScript.psgDemo"
 
 /* **************************************************************************
-    ${SingleLineDescription}
+    A process script that demonstrates (and tests) 
+    * documents, 
+    * dynamic document properties,
+    * dynamic process properties,
+    * process properties
+    * and the execution context. 
         
-    IN: [Describe inbound arguments]
-    IN: [Describe outbound arguments]
     ------------------------------------------------
-    ${DATE}  ${Author} -   Created
-	Template v0.2.0
+    27.04.2024  mspro   -   Created
 ************************************************************************** */
 final _logger = ExecutionUtil.getBaseLogger()
 _logger.finest('>>> Script start ' + SCRIPT_NAME)
 
 try {
-    int docCount = dataContext.getDataCount()
-    _logger.fine("In-Document Count=${  docCount}")
+    _logger.fine("In-Document Count=${dataContext.getDataCount()}")
 
-    for (int docNo = 0; docNo < docCount; docNo++) {
+    for (int docNo = 0; docNo < dataContext.getDataCount(); docNo++) {
         final String textDoc = _getTextDocument(dataContext, docNo)
-        final Properties props = dataContext.getProperties( docNo)
+        final Properties props = dataContext.getProperties(docNo)
 
         // *********** Script functionality ************
-        
-        // region DemoCode 
-        // The functionality below is demo, only.
-        // *** Replace with your code! ***
-        
-        //_logger.info( "Doc[$docNo]='$textDoc'")       // Log the document itself --> Boomi Trace
+        _logger.info( "Doc[${docNo}]='${textDoc}'")       // Log the document itself --> Boomi Trace
 
         // Increment Dynamic Document Property
         final String DDP_PROP_NAME = "DDP_IntValue"
         int ddpVal1 = _getDDP( props, DDP_PROP_NAME) as int
         _setDDP( props, DDP_PROP_NAME, ddpVal1 +1)
         _logger.info("${DDP_PROP_NAME}='${ddpVal1}'")
-
+        
+        
         // increment DDP_Value and DPP_Value 
-
+        
         final String DPP_PROP_NAME = "DPP_IntValue"
         int dppValue = _getDPP( DPP_PROP_NAME ) as int
         _setDPP(DPP_PROP_NAME, dppValue +1 )
         _logger.info("${DPP_PROP_NAME}='${dppValue}'")
 
+        
         final String PROCESS_PROPERTY_COMPONENT_ID = "8fb41f63-a988-4778-8cc8-0144f30ace81"
         final String VAL1_ID = "eea9e988-cb14-4a84-ba37-ee455451a741"
         int ppVal1 = ExecutionUtil.getProcessProperty(PROCESS_PROPERTY_COMPONENT_ID, VAL1_ID) as int
-        ExecutionUtil.setProcessProperty(PROCESS_PROPERTY_COMPONENT_ID, VAL1_ID, ppVal1+1)
-        // endregion
+        ExecutionUtil.setProcessProperty(PROCESS_PROPERTY_COMPONENT_ID, VAL1_ID, ppVal1+1) 
         
         // ******** end of Script functionality ********
 
