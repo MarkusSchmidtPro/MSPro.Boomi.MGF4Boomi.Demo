@@ -1,49 +1,29 @@
-## Intellij ###
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
-# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
-
-# User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
-
-# Groovy
-
-«Archive»/
-lib/
+### IntelliJ IDEA ###
 out/
-doc/Notion_Export.zip
-doc/.gitbook/assets/buyMeACoffee.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/IntelliJ 7ef933f5f8a8444283790d03ea6f5e1e.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Setup Guide cbd6cb0d375246c1b832555fd5ffc131.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Test your project setup 8cfaac77237644e29a4179d91c3cf94e.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Untitled 1.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Untitled 2.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Untitled 3.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Untitled 4.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Untitled.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Test your project setup 8cfaac77237644e29a4179d91c3cf94e/Untitled 1.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Test your project setup 8cfaac77237644e29a4179d91c3cf94e/Untitled 2.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Test your project setup 8cfaac77237644e29a4179d91c3cf94e/Untitled 3.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Create a Customer Project 2df4a711ccc44a5e8093d52c50fa43a5/Test your project setup 8cfaac77237644e29a4179d91c3cf94e/Untitled.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Local disk folder structure d010906aac0344bab591f7bebd243856.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Local disk folder structure d010906aac0344bab591f7bebd243856/Untitled.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596/Untitled 1.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596/Untitled 2.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596/Untitled 3.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596/Untitled 4.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596/Untitled 5.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596/Untitled 6.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Pre-Requisites 7deb11c4cf894c33b76456ab85cad596/Untitled.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145/First time setup with IntelliJ 8996f46e6cbe4fe9aac05d0d0a53dac2.md
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145/psWorking.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145/Untitled 2.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/Getting Started 019408ce4279434d934d162b6ed03d4e/Setup a customer project a5e8a967b06b4f9d9123b55f72e07145/Untitled.png
-Notion_Export/«GitBooks» MGF4Boomi - Groovy for Boomi bfadc9ce63764373816fa22fccd3cdc1/IntelliJ 7ef933f5f8a8444283790d03ea6f5e1e/Untitled.png
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
