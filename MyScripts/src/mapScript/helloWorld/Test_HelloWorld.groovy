@@ -1,4 +1,4 @@
-package mapScript
+package mapScript.helloWorld
 
 import groovy.transform.SourceURI
 import groovy.transform.TypeChecked

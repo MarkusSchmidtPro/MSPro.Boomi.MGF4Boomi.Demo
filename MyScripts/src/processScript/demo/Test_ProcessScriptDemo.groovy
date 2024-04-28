@@ -1,5 +1,6 @@
-package processScript
+package processScript.demo
 
+import groovy.json.JsonSlurper
 import groovy.transform.SourceURI
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.Document
@@ -24,7 +25,7 @@ class Test_ProcessScriptDemo {
 	@Test
 	void test01() {
 
-		ProcessScriptContext testContext = new ProcessScriptContext()
+		ProcessScriptContext context = new ProcessScriptContext()
 		// Initialize 
 		// * Execution context          : executionContexts
 		// * Dynamic Process Properties : dynProcPros
@@ -33,10 +34,10 @@ class Test_ProcessScriptDemo {
 		//      incl. Dynamic Document Properties
 		// --------------------------------------------------------------
 
-		// testContext.executionProperties.ACCOUNT_ID = "IntelliJ_IDEA-M42S66"
+		// context.executionProperties.ACCOUNT_ID = "IntelliJ_IDEA-M42S66"
 
-		testContext.dynProcPros.DPP_ProcPropString = "My Process Property"
-		testContext.dynProcPros.DPP_IntValue = 0
+		context.dynProcPros.DPP_ProcPropString = "My Process Property"
+		context.dynProcPros.DPP_IntValue = 0
 
 		// region Process Property 
 
@@ -51,7 +52,7 @@ class Test_ProcessScriptDemo {
 		def procPropValue1 = 4711
 		def procPropValue2 = "Markus Schmidt"
 		
-		testContext.procPros = [(PROCESS_PROPERTY_COMPONENT_ID): [
+		context.procPros = [(PROCESS_PROPERTY_COMPONENT_ID): [
 				(VAL1_ID): procPropValue1,
 				(VAL2_ID): procPropValue2
 		]]
@@ -60,15 +61,21 @@ class Test_ProcessScriptDemo {
 		// region Documents
 
 		final String DDP_Name = "DDP_IntValue"
-		int ddpValue = 10
-		testContext.inputDocuments = [
-				Document.fromText("Document 01 content", [(DDP_Name): ddpValue]),
-				// Document.fromFile( _testFiles.get( "demo.json") )
+		int[] ddpValues = [ 10, 11, 12]
+		
+		context.inputDocuments = [
+				Document.fromText('''
+				{
+					"firstname" : "Walter",
+					"lastname" : "Schmidt"
+				}''', [(DDP_Name): ddpValues[0]]),
+				Document.fromFile( _testFiles.get( "demoDoc01.json") , [(DDP_Name): ddpValues[1]]),
+				Document.fromFile( _testFiles.get( "demoDoc02.json") , [(DDP_Name): ddpValues[2]])
 		]
 
 		// endregion
 
-		_testScript.run(testContext)
+		_testScript.run(context)
 
 		//
 		// Check and print test result for each document
@@ -76,27 +83,34 @@ class Test_ProcessScriptDemo {
 		println("Script Test Output")
 		println("------------------")
 		
+		// Validate our expectations
 		
-		int documentCount = testContext.outputDocuments.size()
-		println("${testContext.outputDocuments.size()} Document(s) after script execution")
-		assert documentCount == testContext.outputDocuments.size() 
+		int documentCount = context.outputDocuments.size()
+		println("${context.outputDocuments.size()} Document(s) after script execution")
+		assert documentCount == context.outputDocuments.size() 
 
-		assert testContext.dynProcPros.DPP_IntValue == 1
+		assert context.dynProcPros.DPP_IntValue == 1
 
-		def pp = testContext.procPros[PROCESS_PROPERTY_COMPONENT_ID]
+		def pp = context.procPros[PROCESS_PROPERTY_COMPONENT_ID]
 		assert pp[ VAL1_ID] == procPropValue1 + 1
 		assert pp[ VAL2_ID] == procPropValue2
-		
-		
-		for (int docNo = 0; docNo < documentCount; docNo++) {
-			Document doc = testContext.outputDocuments[docNo]
-			String docText = doc.toString()
-			assert docText != "", "Document is null"
 
+		def js = new JsonSlurper()
+		for (int docNo = 0; docNo < documentCount; docNo++) {
+			Document doc = context.outputDocuments[docNo]
+			String textDoc = doc.toString()
+			assert textDoc != "", "Document is null"
+
+			Map jsonDoc = js.parseText( textDoc) as Map
+			String fullName = "${jsonDoc.lastname}, ${jsonDoc.firstname}"
+			println( "Fullname: $fullName")
+			assert jsonDoc.fullname == fullName
+			
+			
 			for (def p in doc.getProperties()) println("${p.key}='${p.value}'")
 
 			int newDDPValue = doc.getProperty(DDP_Name) as int
-			assert  newDDPValue ==  ddpValue+1
+			assert  newDDPValue ==  ddpValues[docNo]+1
 			println("${DDP_Name}=${newDDPValue}")
 		}
 	}

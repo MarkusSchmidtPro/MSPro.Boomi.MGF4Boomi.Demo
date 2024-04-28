@@ -1,4 +1,4 @@
-package processScript
+package processScript.process_log
 
 
 import groovy.transform.SourceURI
