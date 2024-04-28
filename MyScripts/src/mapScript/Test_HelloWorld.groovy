@@ -1,8 +1,9 @@
-
+package mapScript
 
 import groovy.transform.SourceURI
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.MapScript
+import msPro.mgf4boomi.MapScriptContext
 import org.junit.Test
 
 
@@ -29,19 +30,17 @@ class Test_HelloWorld {
         // Script Output variables are also added to that context
         // and can be validated after the execution.
         //
-        HashMap scriptContext = [
+        MapScriptContext scriptContext = new MapScriptContext(  [
                 a: 5,
                 b: 7
-        ]
+        ])
         _testScript.run(scriptContext)
 
-        // -----------------------------------------------------
-        // Perform your tests here to check whether the script 
-        // execution met your expectation.
-        assert scriptContext.total != null, "Script did not set 'total' as output parameter!"
-        assert scriptContext.total == scriptContext.a + scriptContext.b, "Calculation result does not meet expectations!"
+        println("\r\n--- Test Output ----------")
+        assert scriptContext.variables.total != null, "Script did not set 'total' as output parameter!"
+        assert scriptContext.variables.total == (scriptContext.variables.a as int) + (scriptContext.variables.b as int), "Calculation result does not meet expectations!"
 
         // Print to console windows and validate results
-        println("Test Total = " + scriptContext.total)
+        println("Test Total = " + scriptContext.variables.total)
     }
 }

@@ -1,4 +1,4 @@
-package mapScript.helloWorld
+package mapScript
 
 import com.boomi.execution.ExecutionUtil
 

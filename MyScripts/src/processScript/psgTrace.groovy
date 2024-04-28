@@ -1,4 +1,4 @@
-package processScript.helloWorld
+package processScript
 
 /// *************** COPY AND PASTE FROM HERE *****************
 
@@ -25,20 +25,21 @@ final String userDefinedPropertyBase = 'document.dynamic.userdefined.'
 
 
 try {
-    _logger.info("DOC Count=${dataContext.getDataCount()}")
+    int docCount = dataContext.getDataCount()
+    _logger.info("Document Count=$docCount")
 
-    for (int docNo = 0; docNo < dataContext.getDataCount(); docNo++) {
-        String docText = _getTextDocument(dataContext, docNo)
-        Properties dynDocProperties = dataContext.getProperties(docNo)
+    for (int docNo = 0; docNo < docCount; docNo++) {
+        String textDoc = _getTextDocument(dataContext, docNo)
+        Properties props = dataContext.getProperties(docNo)
 
         // *********** Script functionality ************
         // Log document content and all DDPs
 
-        _logger.info("Doc[$docNo]=$docText")
-        for (def ddp in dynDocProperties) _logger.info("-- ${ddp.key}=\"${ddp.value}\"")
+        _logger.info("Doc[$docNo]=$textDoc")
+        for (def ddp in props) _logger.info("-- ${ddp.key}=\"${ddp.value}\"")
         
         // Don't forget to use the userDefinedPropertyBase as the root path to the DDPs
-        String ddpV1 = dynDocProperties[ userDefinedPropertyBase + "DDP_V1"]
+        String ddpV1 = props[ userDefinedPropertyBase + "DDP_V1"]
         if( ddpV1 == null) {
             // In a real application you will want to throw an exception 
             // if mandatory DDP are not defined. YOu throw that exception because the script
@@ -54,7 +55,7 @@ try {
        
 
         // ******** end of Script functionality ********
-        _setTextDocument(dataContext, docText, dynDocProperties)
+        _setTextDocument(dataContext, textDoc, props)
     }
 
     _logger.info('<<< End Script')
