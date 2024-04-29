@@ -14,7 +14,7 @@ class Test_ProcessScriptDemo {
 
 	@SourceURI
 	URI _sourceUri
-	final ProcessScript _testScript = new ProcessScript("psgDemo.groovy", _sourceUri)
+	final ProcessScript _testScript = new ProcessScript("psgProcessScriptDemo.groovy", _sourceUri)
 	
 	final TestFilesHelper _testFiles = new TestFilesHelper( "testData", _sourceUri)
 
