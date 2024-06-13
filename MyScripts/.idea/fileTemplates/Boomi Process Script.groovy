@@ -6,13 +6,12 @@ final String SCRIPT_NAME = "${BoomiScriptName}"
 /* **************************************************************************
     ${SingleLineDescription}
         
-    IN: [Describe inbound arguments]
-    IN: [Describe outbound arguments]
+    IN : [Describe inbound arguments]
+    OUT: [Describe outbound arguments]
     ------------------------------------------------
     ${DATE}  ${Author} -   Created
-	Template v0.2.0
+    Template v0.2.1
 ************************************************************************** */
-
 
 
 final _logger = ExecutionUtil.getBaseLogger()
