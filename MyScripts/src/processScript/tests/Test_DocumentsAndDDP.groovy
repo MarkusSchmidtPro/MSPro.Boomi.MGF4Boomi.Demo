@@ -3,10 +3,7 @@ package processScript.tests
 import groovy.json.JsonOutput
 import groovy.transform.SourceURI
 import groovy.transform.TypeChecked
-import msPro.mgf4boomi.Document
-import msPro.mgf4boomi.ProcessScript
-import msPro.mgf4boomi.ProcessScriptContext
-import msPro.mgf4boomi.TestFilesHelper
+import msPro.mgf4boomi.*
 import org.junit.Test
 
 /**

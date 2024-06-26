@@ -29,7 +29,6 @@ try {
 		// *********** Document related functionality ************
 		// Your document related code here ...
 		_logger.info( "Doc[$docNo]: " + textDoc)
-		def jsonDoc = js.parseText( textDoc)
 		// ******** end of Document related functionality ********
 
 		_setTextDocument(dataContext, textDoc, props)
