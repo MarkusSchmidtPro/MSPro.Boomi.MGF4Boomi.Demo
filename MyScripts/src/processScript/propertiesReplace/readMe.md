@@ -20,11 +20,12 @@ Imagine, you have two Dynamic Document Properties:
 * `DDP_Lastname` = "Schmidt"
 
 ![image-20240627121455716](assets/image-20240627121455716.png)and you *create TestDocument()* as follows:
+<sup>(Do not forget to set the quotation mark: `'`. Otherwise Boomi will try to resolve the placeholders `{}` as properties in the Message Shape.)</sup>
 
 ```
-Hello {D:DDP_Firstname} {D:DDP_Lastname}
+'Hello {D:DDP_Firstname} {D:DDP_Lastname}
 ....
-This message was created on {P:UtcNow}
+This message was created on {P:UtcNow}'
 ```
 
 > ### Out-Of-the box: well-known tags
@@ -32,3 +33,5 @@ This message was created on {P:UtcNow}
 > Please notice, the [script](MyScripts/src/processScript/propertiesReplace/psgpropertiesReplace.groovy) supports a couple of *out-of-the-box* tags, like `UtcNow`, `CurrentProcessName`, `TraceId` etc. Check the script's source-code `private String _tryGetWellKnownProperty(String propertyName) {` function. 
 >
 > Feel free to add more tags if you want.
+
+![image-20240627122539826](assets/image-20240627122539826.png)
