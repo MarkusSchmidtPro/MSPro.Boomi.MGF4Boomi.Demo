@@ -1,4 +1,4 @@
-# Markus' Groovy for Boomi
+# ![status_4727553_64](assets/status_4727553_64.png) Markus' Groovy for Boomi - DEMO
 
 Develop, debug and unit-test Groovy scripts for Boomi Integration.
 
