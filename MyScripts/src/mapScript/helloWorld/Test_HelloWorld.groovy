@@ -3,7 +3,6 @@ package mapScript.helloWorld
 import groovy.transform.SourceURI
 import groovy.transform.TypeChecked
 import msPro.mgf4boomi.MapScript
-import msPro.mgf4boomi.MapScriptContext
 import org.junit.Test
 
 
