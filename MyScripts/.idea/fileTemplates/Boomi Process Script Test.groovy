@@ -1,10 +1,7 @@
 package templatesSource
 
-import groovy.transform.SourceURI
-import groovy.transform.TypeChecked
-import msPro.mgf4boomi.Document
-import msPro.mgf4boomi.ProcessScript
-import msPro.mgf4boomi.ProcessScriptContext
+import groovy.transform.*
+import msPro.mgf4boomi.*
 import org.junit.Test
 
 @TypeChecked
@@ -14,7 +11,6 @@ class Test_${BoomiScriptName} {
 	@SourceURI
 	URI _sourceUri
 	final ProcessScript _testScript = new ProcessScript("psg" + SCRIPT_NAME + ".groovy", _sourceUri)
-
 
 	/** A short description what this test is supposed to do. */
 	@Test
